@@ -1,0 +1,8270 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Quang Bảo | Portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  
+
+
+
+<style>
+#loading-screen {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background-color: #000;
+  z-index: 99999;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 18px;
+  font-family: 'Segoe UI', sans-serif;
+}
+.loader {
+  border: 6px solid #f3f3f3;
+  border-top: 6px solid #ff0000;
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  animation: spin 1.5s linear infinite;
+}
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+.loading-text {
+  margin-top: 15px;
+  animation: pulse 1s infinite;
+}
+@keyframes pulse {
+  0% { opacity: 1; }
+  50% { opacity: 0.4; }
+  100% { opacity: 1; }
+}
+
+/* Avatar */
+#avatar {
+  position: fixed;
+  top: 15px;
+  left: 15px;
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  border: 3px solid #ff0000;
+  box-shadow: 0 0 15px red;
+  z-index: 9999;
+  cursor: pointer;
+  transition: transform 0.3s;
+}
+#avatar:hover {
+  transform: scale(1.1);
+}
+</style>
+
+<style>
+#cursor-light {
+  position: fixed;
+  width: 100px;
+  height: 100px;
+  margin-left: -50px;
+  margin-top: -50px;
+  pointer-events: none;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(255,255,255,0.3) 0%, transparent 60%);
+  z-index: 9999;
+  mix-blend-mode: overlay;
+}
+#audio-toggle {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: rgba(255, 0, 0, 0.85);
+  color: white;
+  border: none;
+  padding: 10px 18px;
+  border-radius: 50px;
+  cursor: pointer;
+  z-index: 9999;
+  box-shadow: 0 0 15px red;
+  transition: transform 0.2s ease;
+}
+#audio-toggle:hover {
+  transform: scale(1.1);
+}
+</style>
+
+
+<style>
+#loading-screen {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background-color: #000;
+  z-index: 99999;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 18px;
+  font-family: 'Segoe UI', sans-serif;
+}
+.loader {
+  border: 6px solid #f3f3f3;
+  border-top: 6px solid #ff0000;
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  animation: spin 1.5s linear infinite;
+}
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+.loading-text {
+  margin-top: 15px;
+  animation: pulse 1s infinite;
+}
+@keyframes pulse {
+  0% { opacity: 1; }
+  50% { opacity: 0.4; }
+  100% { opacity: 1; }
+}
+
+/* Avatar */
+#avatar {
+  position: fixed;
+  top: 15px;
+  left: 15px;
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  border: 3px solid #ff0000;
+  box-shadow: 0 0 15px red;
+  z-index: 9999;
+  cursor: pointer;
+  transition: transform 0.3s;
+}
+#avatar:hover {
+  transform: scale(1.1);
+}
+</style>
+
+<style>
+.fade-in {
+  animation: fadeIn 1.5s ease-in-out forwards;
+  opacity: 0;
+}
+@keyframes fadeIn {
+  to { opacity: 1; }
+}
+#welcome-message {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 28px;
+  font-weight: bold;
+  color: white;
+  z-index: 99999;
+  background: rgba(0, 0, 0, 0.6);
+  padding: 20px 30px;
+  border-radius: 12px;
+  box-shadow: 0 0 15px rgba(255,255,255,0.3);
+  display: none;
+  animation: fadeIn 1.2s ease forwards;
+}
+</style>
+
+
+
+<style>
+#loading-screen {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background-color: #000;
+  z-index: 99999;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 18px;
+  font-family: 'Segoe UI', sans-serif;
+}
+.loader {
+  border: 6px solid #f3f3f3;
+  border-top: 6px solid #ff0000;
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  animation: spin 1.5s linear infinite;
+}
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+.loading-text {
+  margin-top: 15px;
+  animation: pulse 1s infinite;
+}
+@keyframes pulse {
+  0% { opacity: 1; }
+  50% { opacity: 0.4; }
+  100% { opacity: 1; }
+}
+
+/* Avatar */
+#avatar {
+  position: fixed;
+  top: 15px;
+  left: 15px;
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  border: 3px solid #ff0000;
+  box-shadow: 0 0 15px red;
+  z-index: 9999;
+  cursor: pointer;
+  transition: transform 0.3s;
+}
+#avatar:hover {
+  transform: scale(1.1);
+}
+</style>
+
+<style>
+#cursor-light {
+  position: fixed;
+  width: 100px;
+  height: 100px;
+  margin-left: -50px;
+  margin-top: -50px;
+  pointer-events: none;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(255,255,255,0.3) 0%, transparent 60%);
+  z-index: 9999;
+  mix-blend-mode: overlay;
+}
+#audio-toggle {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: rgba(255, 0, 0, 0.85);
+  color: white;
+  border: none;
+  padding: 10px 18px;
+  border-radius: 50px;
+  cursor: pointer;
+  z-index: 9999;
+  box-shadow: 0 0 15px red;
+  transition: transform 0.2s ease;
+}
+#audio-toggle:hover {
+  transform: scale(1.1);
+}
+</style>
+
+
+<style>
+#loading-screen {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background-color: #000;
+  z-index: 99999;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 18px;
+  font-family: 'Segoe UI', sans-serif;
+}
+.loader {
+  border: 6px solid #f3f3f3;
+  border-top: 6px solid #ff0000;
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  animation: spin 1.5s linear infinite;
+}
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+.loading-text {
+  margin-top: 15px;
+  animation: pulse 1s infinite;
+}
+@keyframes pulse {
+  0% { opacity: 1; }
+  50% { opacity: 0.4; }
+  100% { opacity: 1; }
+}
+
+/* Avatar */
+#avatar {
+  position: fixed;
+  top: 15px;
+  left: 15px;
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  border: 3px solid #ff0000;
+  box-shadow: 0 0 15px red;
+  z-index: 9999;
+  cursor: pointer;
+  transition: transform 0.3s;
+}
+#avatar:hover {
+  transform: scale(1.1);
+}
+</style>
+
+<style>
+#login-screen input.correct {
+  border: 2px solid lime;
+  animation: pulseGreen 0.5s ease;
+}
+#login-screen input.incorrect {
+  border: 2px solid red;
+  animation: shake 0.3s ease;
+}
+@keyframes shake {
+  0% { transform: translateX(0); }
+  25% { transform: translateX(-5px); }
+  50% { transform: translateX(5px); }
+  75% { transform: translateX(-5px); }
+  100% { transform: translateX(0); }
+}
+@keyframes pulseGreen {
+  0% { box-shadow: 0 0 0px lime; }
+  100% { box-shadow: 0 0 10px lime; }
+}
+</style>
+
+
+
+
+<style>
+#loading-screen {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background-color: #000;
+  z-index: 99999;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 18px;
+  font-family: 'Segoe UI', sans-serif;
+}
+.loader {
+  border: 6px solid #f3f3f3;
+  border-top: 6px solid #ff0000;
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  animation: spin 1.5s linear infinite;
+}
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+.loading-text {
+  margin-top: 15px;
+  animation: pulse 1s infinite;
+}
+@keyframes pulse {
+  0% { opacity: 1; }
+  50% { opacity: 0.4; }
+  100% { opacity: 1; }
+}
+
+/* Avatar */
+#avatar {
+  position: fixed;
+  top: 15px;
+  left: 15px;
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  border: 3px solid #ff0000;
+  box-shadow: 0 0 15px red;
+  z-index: 9999;
+  cursor: pointer;
+  transition: transform 0.3s;
+}
+#avatar:hover {
+  transform: scale(1.1);
+}
+</style>
+
+<style>
+#cursor-light {
+  position: fixed;
+  width: 100px;
+  height: 100px;
+  margin-left: -50px;
+  margin-top: -50px;
+  pointer-events: none;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(255,255,255,0.3) 0%, transparent 60%);
+  z-index: 9999;
+  mix-blend-mode: overlay;
+}
+#audio-toggle {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: rgba(255, 0, 0, 0.85);
+  color: white;
+  border: none;
+  padding: 10px 18px;
+  border-radius: 50px;
+  cursor: pointer;
+  z-index: 9999;
+  box-shadow: 0 0 15px red;
+  transition: transform 0.2s ease;
+}
+#audio-toggle:hover {
+  transform: scale(1.1);
+}
+</style>
+
+
+<style>
+#loading-screen {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background-color: #000;
+  z-index: 99999;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 18px;
+  font-family: 'Segoe UI', sans-serif;
+}
+.loader {
+  border: 6px solid #f3f3f3;
+  border-top: 6px solid #ff0000;
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  animation: spin 1.5s linear infinite;
+}
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+.loading-text {
+  margin-top: 15px;
+  animation: pulse 1s infinite;
+}
+@keyframes pulse {
+  0% { opacity: 1; }
+  50% { opacity: 0.4; }
+  100% { opacity: 1; }
+}
+
+/* Avatar */
+#avatar {
+  position: fixed;
+  top: 15px;
+  left: 15px;
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  border: 3px solid #ff0000;
+  box-shadow: 0 0 15px red;
+  z-index: 9999;
+  cursor: pointer;
+  transition: transform 0.3s;
+}
+#avatar:hover {
+  transform: scale(1.1);
+}
+</style>
+
+<style>
+.fade-in {
+  animation: fadeIn 1.5s ease-in-out forwards;
+  opacity: 0;
+}
+@keyframes fadeIn {
+  to { opacity: 1; }
+}
+#welcome-message {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 28px;
+  font-weight: bold;
+  color: white;
+  z-index: 99999;
+  background: rgba(0, 0, 0, 0.6);
+  padding: 20px 30px;
+  border-radius: 12px;
+  box-shadow: 0 0 15px rgba(255,255,255,0.3);
+  display: none;
+  animation: fadeIn 1.2s ease forwards;
+}
+</style>
+
+
+
+<style>
+#loading-screen {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background-color: #000;
+  z-index: 99999;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 18px;
+  font-family: 'Segoe UI', sans-serif;
+}
+.loader {
+  border: 6px solid #f3f3f3;
+  border-top: 6px solid #ff0000;
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  animation: spin 1.5s linear infinite;
+}
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+.loading-text {
+  margin-top: 15px;
+  animation: pulse 1s infinite;
+}
+@keyframes pulse {
+  0% { opacity: 1; }
+  50% { opacity: 0.4; }
+  100% { opacity: 1; }
+}
+
+/* Avatar */
+#avatar {
+  position: fixed;
+  top: 15px;
+  left: 15px;
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  border: 3px solid #ff0000;
+  box-shadow: 0 0 15px red;
+  z-index: 9999;
+  cursor: pointer;
+  transition: transform 0.3s;
+}
+#avatar:hover {
+  transform: scale(1.1);
+}
+</style>
+
+<style>
+#cursor-light {
+  position: fixed;
+  width: 100px;
+  height: 100px;
+  margin-left: -50px;
+  margin-top: -50px;
+  pointer-events: none;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(255,255,255,0.3) 0%, transparent 60%);
+  z-index: 9999;
+  mix-blend-mode: overlay;
+}
+#audio-toggle {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: rgba(255, 0, 0, 0.85);
+  color: white;
+  border: none;
+  padding: 10px 18px;
+  border-radius: 50px;
+  cursor: pointer;
+  z-index: 9999;
+  box-shadow: 0 0 15px red;
+  transition: transform 0.2s ease;
+}
+#audio-toggle:hover {
+  transform: scale(1.1);
+}
+</style>
+
+
+<style>
+#loading-screen {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background-color: #000;
+  z-index: 99999;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 18px;
+  font-family: 'Segoe UI', sans-serif;
+}
+.loader {
+  border: 6px solid #f3f3f3;
+  border-top: 6px solid #ff0000;
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  animation: spin 1.5s linear infinite;
+}
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+.loading-text {
+  margin-top: 15px;
+  animation: pulse 1s infinite;
+}
+@keyframes pulse {
+  0% { opacity: 1; }
+  50% { opacity: 0.4; }
+  100% { opacity: 1; }
+}
+
+/* Avatar */
+#avatar {
+  position: fixed;
+  top: 15px;
+  left: 15px;
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  border: 3px solid #ff0000;
+  box-shadow: 0 0 15px red;
+  z-index: 9999;
+  cursor: pointer;
+  transition: transform 0.3s;
+}
+#avatar:hover {
+  transform: scale(1.1);
+}
+</style>
+
+<style>
+    .clock {
+      color: red;
+      border: 1px solid red;
+      text-shadow: 0 0 10px red;
+
+      position: fixed;
+      top: 10px;
+      right: 20px;
+      font-size: 1rem;
+      color: #ffffffcc;
+      font-weight: bold;
+      background-color: rgba(0, 0, 0, 0.4);
+      padding: 8px 12px;
+      border-radius: 8px;
+      font-family: 'Poppins', sans-serif;
+    }
+    .marquee {
+      text-shadow: 0 0 10px #00c6ff, 0 0 20px #00c6ff;
+
+      position: fixed;
+      bottom: 0;
+      width: 100%;
+      background-color: rgba(0, 0, 0, 0.4);
+      color: #00c6ff;
+      font-weight: bold;
+      padding: 5px 0;
+      font-family: 'Poppins', sans-serif;
+      overflow: hidden;
+      white-space: nowrap;
+    }
+    .marquee span {
+      display: inline-block;
+      padding-left: 100%;
+      animation: marquee 15s linear infinite;
+    }
+    @keyframes marquee {
+      0% { transform: translate(0, 0); }
+      100% { transform: translate(-100%, 0); }
+    }
+  
+    #bgVideo {
+      position: fixed;
+      right: 0;
+      bottom: 0;
+      min-width: 100%;
+      min-height: 100%;
+      z-index: -1;
+      object-fit: cover;
+      filter: brightness(0.4);
+    }
+
+    body {
+  font-family: 'Playfair Display', serif;
+  font-style: italic;
+
+      scroll-behavior: smooth;
+    }
+    .section {
+      max-width: 900px;
+      margin: 50px auto;
+      background-color: rgba(255, 255, 255, 0.06);
+      padding: 20px 30px;
+      border-radius: 10px;
+      box-shadow: 0 0 15px rgba(0,0,0,0.2);
+      backdrop-filter: blur(10px);
+      color: #fff;
+    }
+    .section h2 {
+      font-size: 24px;
+      color: #00c6ff;
+      margin-bottom: 10px;
+    }
+    .section p, .section ul {
+      font-size: 16px;
+      line-height: 1.6;
+    }
+    .section ul {
+      list-style: none;
+      padding: 0;
+    }
+    .section ul li {
+      margin: 8px 0;
+    }
+
+.social-links {
+  position: fixed;
+  bottom: 50px;
+  right: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  z-index: 10;
+}
+.social-icon {
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  color: white;
+  background-color: rgba(255,255,255,0.1);
+  padding: 8px;
+  border-radius: 50%;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+.social-icon:hover {
+  background-color: #00c6ff;
+  transform: scale(1.1);
+}
+.social-icon svg {
+  width: 100%;
+  height: 100%;
+}
+
+
+body::before {
+  content: "";
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  border: 6px solid;
+  border-image: linear-gradient(45deg, red, orange, yellow, green, blue, indigo, violet) 1;
+  animation: borderRotate 8s linear infinite;
+  pointer-events: none;
+  z-index: 9999;
+  box-sizing: border-box;
+}
+
+@keyframes borderRotate {
+  0% { border-image-source: linear-gradient(45deg, red, orange, yellow, green, blue, indigo, violet); }
+  25% { border-image-source: linear-gradient(135deg, orange, yellow, green, blue, indigo, violet, red); }
+  50% { border-image-source: linear-gradient(225deg, yellow, green, blue, indigo, violet, red, orange); }
+  75% { border-image-source: linear-gradient(315deg, green, blue, indigo, violet, red, orange, yellow); }
+  100% { border-image-source: linear-gradient(45deg, red, orange, yellow, green, blue, indigo, violet); }
+}
+
+</style>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@1,500&display=swap" rel="stylesheet">
+
+<style>
+.fade-in {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+.fade-in.visible {
+  opacity: 1;
+  transform: none;
+}
+</style>
+
+<style>
+a.social-icon img {
+  transition: transform 0.5s ease, filter 0.3s;
+}
+a.social-icon:hover img {
+  transform: scale(1.2) rotate(10deg);
+  filter: drop-shadow(0 0 8px #fff);
+}
+</style>
+</head>
+
+<body class="fade-in">
+
+
+
+
+
+<style>
+#loading-screen {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background-color: #000;
+  z-index: 99999;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 18px;
+  font-family: 'Segoe UI', sans-serif;
+}
+.loader {
+  border: 6px solid #f3f3f3;
+  border-top: 6px solid #ff0000;
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  animation: spin 1.5s linear infinite;
+}
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+.loading-text {
+  margin-top: 15px;
+  animation: pulse 1s infinite;
+}
+@keyframes pulse {
+  0% { opacity: 1; }
+  50% { opacity: 0.4; }
+  100% { opacity: 1; }
+}
+
+/* Avatar */
+#avatar {
+  position: fixed;
+  top: 15px;
+  left: 15px;
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  border: 3px solid #ff0000;
+  box-shadow: 0 0 15px red;
+  z-index: 9999;
+  cursor: pointer;
+  transition: transform 0.3s;
+}
+#avatar:hover {
+  transform: scale(1.1);
+}
+</style>
+
+<style>
+#cursor-light {
+  position: fixed;
+  width: 100px;
+  height: 100px;
+  margin-left: -50px;
+  margin-top: -50px;
+  pointer-events: none;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(255,255,255,0.3) 0%, transparent 60%);
+  z-index: 9999;
+  mix-blend-mode: overlay;
+}
+#audio-toggle {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: rgba(255, 0, 0, 0.85);
+  color: white;
+  border: none;
+  padding: 10px 18px;
+  border-radius: 50px;
+  cursor: pointer;
+  z-index: 9999;
+  box-shadow: 0 0 15px red;
+  transition: transform 0.2s ease;
+}
+#audio-toggle:hover {
+  transform: scale(1.1);
+}
+</style>
+
+
+<style>
+#loading-screen {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background-color: #000;
+  z-index: 99999;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 18px;
+  font-family: 'Segoe UI', sans-serif;
+}
+.loader {
+  border: 6px solid #f3f3f3;
+  border-top: 6px solid #ff0000;
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  animation: spin 1.5s linear infinite;
+}
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+.loading-text {
+  margin-top: 15px;
+  animation: pulse 1s infinite;
+}
+@keyframes pulse {
+  0% { opacity: 1; }
+  50% { opacity: 0.4; }
+  100% { opacity: 1; }
+}
+
+/* Avatar */
+#avatar {
+  position: fixed;
+  top: 15px;
+  left: 15px;
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  border: 3px solid #ff0000;
+  box-shadow: 0 0 15px red;
+  z-index: 9999;
+  cursor: pointer;
+  transition: transform 0.3s;
+}
+#avatar:hover {
+  transform: scale(1.1);
+}
+</style>
+
+<style>
+.fade-in {
+  animation: fadeIn 1.5s ease-in-out forwards;
+  opacity: 0;
+}
+@keyframes fadeIn {
+  to { opacity: 1; }
+}
+#welcome-message {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 28px;
+  font-weight: bold;
+  color: white;
+  z-index: 99999;
+  background: rgba(0, 0, 0, 0.6);
+  padding: 20px 30px;
+  border-radius: 12px;
+  box-shadow: 0 0 15px rgba(255,255,255,0.3);
+  display: none;
+  animation: fadeIn 1.2s ease forwards;
+}
+</style>
+
+
+
+<style>
+#loading-screen {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background-color: #000;
+  z-index: 99999;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 18px;
+  font-family: 'Segoe UI', sans-serif;
+}
+.loader {
+  border: 6px solid #f3f3f3;
+  border-top: 6px solid #ff0000;
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  animation: spin 1.5s linear infinite;
+}
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+.loading-text {
+  margin-top: 15px;
+  animation: pulse 1s infinite;
+}
+@keyframes pulse {
+  0% { opacity: 1; }
+  50% { opacity: 0.4; }
+  100% { opacity: 1; }
+}
+
+/* Avatar */
+#avatar {
+  position: fixed;
+  top: 15px;
+  left: 15px;
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  border: 3px solid #ff0000;
+  box-shadow: 0 0 15px red;
+  z-index: 9999;
+  cursor: pointer;
+  transition: transform 0.3s;
+}
+#avatar:hover {
+  transform: scale(1.1);
+}
+</style>
+
+<style>
+#cursor-light {
+  position: fixed;
+  width: 100px;
+  height: 100px;
+  margin-left: -50px;
+  margin-top: -50px;
+  pointer-events: none;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(255,255,255,0.3) 0%, transparent 60%);
+  z-index: 9999;
+  mix-blend-mode: overlay;
+}
+#audio-toggle {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: rgba(255, 0, 0, 0.85);
+  color: white;
+  border: none;
+  padding: 10px 18px;
+  border-radius: 50px;
+  cursor: pointer;
+  z-index: 9999;
+  box-shadow: 0 0 15px red;
+  transition: transform 0.2s ease;
+}
+#audio-toggle:hover {
+  transform: scale(1.1);
+}
+</style>
+
+
+<style>
+#loading-screen {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background-color: #000;
+  z-index: 99999;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 18px;
+  font-family: 'Segoe UI', sans-serif;
+}
+.loader {
+  border: 6px solid #f3f3f3;
+  border-top: 6px solid #ff0000;
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  animation: spin 1.5s linear infinite;
+}
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+.loading-text {
+  margin-top: 15px;
+  animation: pulse 1s infinite;
+}
+@keyframes pulse {
+  0% { opacity: 1; }
+  50% { opacity: 0.4; }
+  100% { opacity: 1; }
+}
+
+/* Avatar */
+#avatar {
+  position: fixed;
+  top: 15px;
+  left: 15px;
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  border: 3px solid #ff0000;
+  box-shadow: 0 0 15px red;
+  z-index: 9999;
+  cursor: pointer;
+  transition: transform 0.3s;
+}
+#avatar:hover {
+  transform: scale(1.1);
+}
+</style>
+
+<style>
+#login-screen input.correct {
+  border: 2px solid lime;
+  animation: pulseGreen 0.5s ease;
+}
+#login-screen input.incorrect {
+  border: 2px solid red;
+  animation: shake 0.3s ease;
+}
+@keyframes shake {
+  0% { transform: translateX(0); }
+  25% { transform: translateX(-5px); }
+  50% { transform: translateX(5px); }
+  75% { transform: translateX(-5px); }
+  100% { transform: translateX(0); }
+}
+@keyframes pulseGreen {
+  0% { box-shadow: 0 0 0px lime; }
+  100% { box-shadow: 0 0 10px lime; }
+}
+</style>
+
+
+
+
+<style>
+#loading-screen {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background-color: #000;
+  z-index: 99999;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 18px;
+  font-family: 'Segoe UI', sans-serif;
+}
+.loader {
+  border: 6px solid #f3f3f3;
+  border-top: 6px solid #ff0000;
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  animation: spin 1.5s linear infinite;
+}
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+.loading-text {
+  margin-top: 15px;
+  animation: pulse 1s infinite;
+}
+@keyframes pulse {
+  0% { opacity: 1; }
+  50% { opacity: 0.4; }
+  100% { opacity: 1; }
+}
+
+/* Avatar */
+#avatar {
+  position: fixed;
+  top: 15px;
+  left: 15px;
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  border: 3px solid #ff0000;
+  box-shadow: 0 0 15px red;
+  z-index: 9999;
+  cursor: pointer;
+  transition: transform 0.3s;
+}
+#avatar:hover {
+  transform: scale(1.1);
+}
+</style>
+
+<style>
+#cursor-light {
+  position: fixed;
+  width: 100px;
+  height: 100px;
+  margin-left: -50px;
+  margin-top: -50px;
+  pointer-events: none;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(255,255,255,0.3) 0%, transparent 60%);
+  z-index: 9999;
+  mix-blend-mode: overlay;
+}
+#audio-toggle {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: rgba(255, 0, 0, 0.85);
+  color: white;
+  border: none;
+  padding: 10px 18px;
+  border-radius: 50px;
+  cursor: pointer;
+  z-index: 9999;
+  box-shadow: 0 0 15px red;
+  transition: transform 0.2s ease;
+}
+#audio-toggle:hover {
+  transform: scale(1.1);
+}
+</style>
+
+
+<style>
+#loading-screen {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background-color: #000;
+  z-index: 99999;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 18px;
+  font-family: 'Segoe UI', sans-serif;
+}
+.loader {
+  border: 6px solid #f3f3f3;
+  border-top: 6px solid #ff0000;
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  animation: spin 1.5s linear infinite;
+}
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+.loading-text {
+  margin-top: 15px;
+  animation: pulse 1s infinite;
+}
+@keyframes pulse {
+  0% { opacity: 1; }
+  50% { opacity: 0.4; }
+  100% { opacity: 1; }
+}
+
+/* Avatar */
+#avatar {
+  position: fixed;
+  top: 15px;
+  left: 15px;
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  border: 3px solid #ff0000;
+  box-shadow: 0 0 15px red;
+  z-index: 9999;
+  cursor: pointer;
+  transition: transform 0.3s;
+}
+#avatar:hover {
+  transform: scale(1.1);
+}
+</style>
+
+<style>
+.fade-in {
+  animation: fadeIn 1.5s ease-in-out forwards;
+  opacity: 0;
+}
+@keyframes fadeIn {
+  to { opacity: 1; }
+}
+#welcome-message {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 28px;
+  font-weight: bold;
+  color: white;
+  z-index: 99999;
+  background: rgba(0, 0, 0, 0.6);
+  padding: 20px 30px;
+  border-radius: 12px;
+  box-shadow: 0 0 15px rgba(255,255,255,0.3);
+  display: none;
+  animation: fadeIn 1.2s ease forwards;
+}
+</style>
+
+
+
+<style>
+#loading-screen {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background-color: #000;
+  z-index: 99999;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 18px;
+  font-family: 'Segoe UI', sans-serif;
+}
+.loader {
+  border: 6px solid #f3f3f3;
+  border-top: 6px solid #ff0000;
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  animation: spin 1.5s linear infinite;
+}
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+.loading-text {
+  margin-top: 15px;
+  animation: pulse 1s infinite;
+}
+@keyframes pulse {
+  0% { opacity: 1; }
+  50% { opacity: 0.4; }
+  100% { opacity: 1; }
+}
+
+/* Avatar */
+#avatar {
+  position: fixed;
+  top: 15px;
+  left: 15px;
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  border: 3px solid #ff0000;
+  box-shadow: 0 0 15px red;
+  z-index: 9999;
+  cursor: pointer;
+  transition: transform 0.3s;
+}
+#avatar:hover {
+  transform: scale(1.1);
+}
+</style>
+
+<style>
+#cursor-light {
+  position: fixed;
+  width: 100px;
+  height: 100px;
+  margin-left: -50px;
+  margin-top: -50px;
+  pointer-events: none;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(255,255,255,0.3) 0%, transparent 60%);
+  z-index: 9999;
+  mix-blend-mode: overlay;
+}
+#audio-toggle {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: rgba(255, 0, 0, 0.85);
+  color: white;
+  border: none;
+  padding: 10px 18px;
+  border-radius: 50px;
+  cursor: pointer;
+  z-index: 9999;
+  box-shadow: 0 0 15px red;
+  transition: transform 0.2s ease;
+}
+#audio-toggle:hover {
+  transform: scale(1.1);
+}
+</style>
+
+
+<style>
+#loading-screen {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background-color: #000;
+  z-index: 99999;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 18px;
+  font-family: 'Segoe UI', sans-serif;
+}
+.loader {
+  border: 6px solid #f3f3f3;
+  border-top: 6px solid #ff0000;
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  animation: spin 1.5s linear infinite;
+}
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+.loading-text {
+  margin-top: 15px;
+  animation: pulse 1s infinite;
+}
+@keyframes pulse {
+  0% { opacity: 1; }
+  50% { opacity: 0.4; }
+  100% { opacity: 1; }
+}
+
+/* Avatar */
+#avatar {
+  position: fixed;
+  top: 15px;
+  left: 15px;
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  border: 3px solid #ff0000;
+  box-shadow: 0 0 15px red;
+  z-index: 9999;
+  cursor: pointer;
+  transition: transform 0.3s;
+}
+#avatar:hover {
+  transform: scale(1.1);
+}
+</style>
+
+<style>
+#page-wrapper {
+  transform: scale(0.92);
+  transform-origin: top center;
+  margin-top: 20px;
+}
+</style>
+
+<div id="page-wrapper">
+
+<video autoplay muted loop id="bg-video">
+  <source src="TikVid.io_7494580624510979350-hd.mp4" type="video/mp4">
+</video>
+
+
+
+
+
+<style>
+#loading-screen {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background-color: #000;
+  z-index: 99999;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 18px;
+  font-family: 'Segoe UI', sans-serif;
+}
+.loader {
+  border: 6px solid #f3f3f3;
+  border-top: 6px solid #ff0000;
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  animation: spin 1.5s linear infinite;
+}
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+.loading-text {
+  margin-top: 15px;
+  animation: pulse 1s infinite;
+}
+@keyframes pulse {
+  0% { opacity: 1; }
+  50% { opacity: 0.4; }
+  100% { opacity: 1; }
+}
+
+/* Avatar */
+#avatar {
+  position: fixed;
+  top: 15px;
+  left: 15px;
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  border: 3px solid #ff0000;
+  box-shadow: 0 0 15px red;
+  z-index: 9999;
+  cursor: pointer;
+  transition: transform 0.3s;
+}
+#avatar:hover {
+  transform: scale(1.1);
+}
+</style>
+
+<style>
+#cursor-light {
+  position: fixed;
+  width: 100px;
+  height: 100px;
+  margin-left: -50px;
+  margin-top: -50px;
+  pointer-events: none;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(255,255,255,0.3) 0%, transparent 60%);
+  z-index: 9999;
+  mix-blend-mode: overlay;
+}
+#audio-toggle {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: rgba(255, 0, 0, 0.85);
+  color: white;
+  border: none;
+  padding: 10px 18px;
+  border-radius: 50px;
+  cursor: pointer;
+  z-index: 9999;
+  box-shadow: 0 0 15px red;
+  transition: transform 0.2s ease;
+}
+#audio-toggle:hover {
+  transform: scale(1.1);
+}
+</style>
+
+
+<style>
+#loading-screen {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background-color: #000;
+  z-index: 99999;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 18px;
+  font-family: 'Segoe UI', sans-serif;
+}
+.loader {
+  border: 6px solid #f3f3f3;
+  border-top: 6px solid #ff0000;
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  animation: spin 1.5s linear infinite;
+}
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+.loading-text {
+  margin-top: 15px;
+  animation: pulse 1s infinite;
+}
+@keyframes pulse {
+  0% { opacity: 1; }
+  50% { opacity: 0.4; }
+  100% { opacity: 1; }
+}
+
+/* Avatar */
+#avatar {
+  position: fixed;
+  top: 15px;
+  left: 15px;
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  border: 3px solid #ff0000;
+  box-shadow: 0 0 15px red;
+  z-index: 9999;
+  cursor: pointer;
+  transition: transform 0.3s;
+}
+#avatar:hover {
+  transform: scale(1.1);
+}
+</style>
+
+<style>
+.fade-in {
+  animation: fadeIn 1.5s ease-in-out forwards;
+  opacity: 0;
+}
+@keyframes fadeIn {
+  to { opacity: 1; }
+}
+#welcome-message {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 28px;
+  font-weight: bold;
+  color: white;
+  z-index: 99999;
+  background: rgba(0, 0, 0, 0.6);
+  padding: 20px 30px;
+  border-radius: 12px;
+  box-shadow: 0 0 15px rgba(255,255,255,0.3);
+  display: none;
+  animation: fadeIn 1.2s ease forwards;
+}
+</style>
+
+
+
+<style>
+#loading-screen {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background-color: #000;
+  z-index: 99999;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 18px;
+  font-family: 'Segoe UI', sans-serif;
+}
+.loader {
+  border: 6px solid #f3f3f3;
+  border-top: 6px solid #ff0000;
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  animation: spin 1.5s linear infinite;
+}
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+.loading-text {
+  margin-top: 15px;
+  animation: pulse 1s infinite;
+}
+@keyframes pulse {
+  0% { opacity: 1; }
+  50% { opacity: 0.4; }
+  100% { opacity: 1; }
+}
+
+/* Avatar */
+#avatar {
+  position: fixed;
+  top: 15px;
+  left: 15px;
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  border: 3px solid #ff0000;
+  box-shadow: 0 0 15px red;
+  z-index: 9999;
+  cursor: pointer;
+  transition: transform 0.3s;
+}
+#avatar:hover {
+  transform: scale(1.1);
+}
+</style>
+
+<style>
+#cursor-light {
+  position: fixed;
+  width: 100px;
+  height: 100px;
+  margin-left: -50px;
+  margin-top: -50px;
+  pointer-events: none;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(255,255,255,0.3) 0%, transparent 60%);
+  z-index: 9999;
+  mix-blend-mode: overlay;
+}
+#audio-toggle {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: rgba(255, 0, 0, 0.85);
+  color: white;
+  border: none;
+  padding: 10px 18px;
+  border-radius: 50px;
+  cursor: pointer;
+  z-index: 9999;
+  box-shadow: 0 0 15px red;
+  transition: transform 0.2s ease;
+}
+#audio-toggle:hover {
+  transform: scale(1.1);
+}
+</style>
+
+
+<style>
+#loading-screen {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background-color: #000;
+  z-index: 99999;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 18px;
+  font-family: 'Segoe UI', sans-serif;
+}
+.loader {
+  border: 6px solid #f3f3f3;
+  border-top: 6px solid #ff0000;
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  animation: spin 1.5s linear infinite;
+}
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+.loading-text {
+  margin-top: 15px;
+  animation: pulse 1s infinite;
+}
+@keyframes pulse {
+  0% { opacity: 1; }
+  50% { opacity: 0.4; }
+  100% { opacity: 1; }
+}
+
+/* Avatar */
+#avatar {
+  position: fixed;
+  top: 15px;
+  left: 15px;
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  border: 3px solid #ff0000;
+  box-shadow: 0 0 15px red;
+  z-index: 9999;
+  cursor: pointer;
+  transition: transform 0.3s;
+}
+#avatar:hover {
+  transform: scale(1.1);
+}
+</style>
+
+<style>
+#login-screen input.correct {
+  border: 2px solid lime;
+  animation: pulseGreen 0.5s ease;
+}
+#login-screen input.incorrect {
+  border: 2px solid red;
+  animation: shake 0.3s ease;
+}
+@keyframes shake {
+  0% { transform: translateX(0); }
+  25% { transform: translateX(-5px); }
+  50% { transform: translateX(5px); }
+  75% { transform: translateX(-5px); }
+  100% { transform: translateX(0); }
+}
+@keyframes pulseGreen {
+  0% { box-shadow: 0 0 0px lime; }
+  100% { box-shadow: 0 0 10px lime; }
+}
+</style>
+
+
+
+
+<style>
+#loading-screen {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background-color: #000;
+  z-index: 99999;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 18px;
+  font-family: 'Segoe UI', sans-serif;
+}
+.loader {
+  border: 6px solid #f3f3f3;
+  border-top: 6px solid #ff0000;
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  animation: spin 1.5s linear infinite;
+}
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+.loading-text {
+  margin-top: 15px;
+  animation: pulse 1s infinite;
+}
+@keyframes pulse {
+  0% { opacity: 1; }
+  50% { opacity: 0.4; }
+  100% { opacity: 1; }
+}
+
+/* Avatar */
+#avatar {
+  position: fixed;
+  top: 15px;
+  left: 15px;
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  border: 3px solid #ff0000;
+  box-shadow: 0 0 15px red;
+  z-index: 9999;
+  cursor: pointer;
+  transition: transform 0.3s;
+}
+#avatar:hover {
+  transform: scale(1.1);
+}
+</style>
+
+<style>
+#cursor-light {
+  position: fixed;
+  width: 100px;
+  height: 100px;
+  margin-left: -50px;
+  margin-top: -50px;
+  pointer-events: none;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(255,255,255,0.3) 0%, transparent 60%);
+  z-index: 9999;
+  mix-blend-mode: overlay;
+}
+#audio-toggle {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: rgba(255, 0, 0, 0.85);
+  color: white;
+  border: none;
+  padding: 10px 18px;
+  border-radius: 50px;
+  cursor: pointer;
+  z-index: 9999;
+  box-shadow: 0 0 15px red;
+  transition: transform 0.2s ease;
+}
+#audio-toggle:hover {
+  transform: scale(1.1);
+}
+</style>
+
+
+<style>
+#loading-screen {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background-color: #000;
+  z-index: 99999;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 18px;
+  font-family: 'Segoe UI', sans-serif;
+}
+.loader {
+  border: 6px solid #f3f3f3;
+  border-top: 6px solid #ff0000;
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  animation: spin 1.5s linear infinite;
+}
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+.loading-text {
+  margin-top: 15px;
+  animation: pulse 1s infinite;
+}
+@keyframes pulse {
+  0% { opacity: 1; }
+  50% { opacity: 0.4; }
+  100% { opacity: 1; }
+}
+
+/* Avatar */
+#avatar {
+  position: fixed;
+  top: 15px;
+  left: 15px;
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  border: 3px solid #ff0000;
+  box-shadow: 0 0 15px red;
+  z-index: 9999;
+  cursor: pointer;
+  transition: transform 0.3s;
+}
+#avatar:hover {
+  transform: scale(1.1);
+}
+</style>
+
+<style>
+.fade-in {
+  animation: fadeIn 1.5s ease-in-out forwards;
+  opacity: 0;
+}
+@keyframes fadeIn {
+  to { opacity: 1; }
+}
+#welcome-message {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 28px;
+  font-weight: bold;
+  color: white;
+  z-index: 99999;
+  background: rgba(0, 0, 0, 0.6);
+  padding: 20px 30px;
+  border-radius: 12px;
+  box-shadow: 0 0 15px rgba(255,255,255,0.3);
+  display: none;
+  animation: fadeIn 1.2s ease forwards;
+}
+</style>
+
+
+
+<style>
+#loading-screen {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background-color: #000;
+  z-index: 99999;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 18px;
+  font-family: 'Segoe UI', sans-serif;
+}
+.loader {
+  border: 6px solid #f3f3f3;
+  border-top: 6px solid #ff0000;
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  animation: spin 1.5s linear infinite;
+}
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+.loading-text {
+  margin-top: 15px;
+  animation: pulse 1s infinite;
+}
+@keyframes pulse {
+  0% { opacity: 1; }
+  50% { opacity: 0.4; }
+  100% { opacity: 1; }
+}
+
+/* Avatar */
+#avatar {
+  position: fixed;
+  top: 15px;
+  left: 15px;
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  border: 3px solid #ff0000;
+  box-shadow: 0 0 15px red;
+  z-index: 9999;
+  cursor: pointer;
+  transition: transform 0.3s;
+}
+#avatar:hover {
+  transform: scale(1.1);
+}
+</style>
+
+<style>
+#cursor-light {
+  position: fixed;
+  width: 100px;
+  height: 100px;
+  margin-left: -50px;
+  margin-top: -50px;
+  pointer-events: none;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(255,255,255,0.3) 0%, transparent 60%);
+  z-index: 9999;
+  mix-blend-mode: overlay;
+}
+#audio-toggle {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: rgba(255, 0, 0, 0.85);
+  color: white;
+  border: none;
+  padding: 10px 18px;
+  border-radius: 50px;
+  cursor: pointer;
+  z-index: 9999;
+  box-shadow: 0 0 15px red;
+  transition: transform 0.2s ease;
+}
+#audio-toggle:hover {
+  transform: scale(1.1);
+}
+</style>
+
+
+<style>
+#loading-screen {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background-color: #000;
+  z-index: 99999;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 18px;
+  font-family: 'Segoe UI', sans-serif;
+}
+.loader {
+  border: 6px solid #f3f3f3;
+  border-top: 6px solid #ff0000;
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  animation: spin 1.5s linear infinite;
+}
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+.loading-text {
+  margin-top: 15px;
+  animation: pulse 1s infinite;
+}
+@keyframes pulse {
+  0% { opacity: 1; }
+  50% { opacity: 0.4; }
+  100% { opacity: 1; }
+}
+
+/* Avatar */
+#avatar {
+  position: fixed;
+  top: 15px;
+  left: 15px;
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  border: 3px solid #ff0000;
+  box-shadow: 0 0 15px red;
+  z-index: 9999;
+  cursor: pointer;
+  transition: transform 0.3s;
+}
+#avatar:hover {
+  transform: scale(1.1);
+}
+</style>
+
+<style>
+#video-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.3); /* phủ đen nhẹ */
+  backdrop-filter: blur(2px); /* hiệu ứng làm mờ */
+  z-index: -1;
+}
+</style>
+<div id="video-overlay"></div>
+
+
+
+
+
+<style>
+#loading-screen {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background-color: #000;
+  z-index: 99999;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 18px;
+  font-family: 'Segoe UI', sans-serif;
+}
+.loader {
+  border: 6px solid #f3f3f3;
+  border-top: 6px solid #ff0000;
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  animation: spin 1.5s linear infinite;
+}
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+.loading-text {
+  margin-top: 15px;
+  animation: pulse 1s infinite;
+}
+@keyframes pulse {
+  0% { opacity: 1; }
+  50% { opacity: 0.4; }
+  100% { opacity: 1; }
+}
+
+/* Avatar */
+#avatar {
+  position: fixed;
+  top: 15px;
+  left: 15px;
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  border: 3px solid #ff0000;
+  box-shadow: 0 0 15px red;
+  z-index: 9999;
+  cursor: pointer;
+  transition: transform 0.3s;
+}
+#avatar:hover {
+  transform: scale(1.1);
+}
+</style>
+
+<style>
+#cursor-light {
+  position: fixed;
+  width: 100px;
+  height: 100px;
+  margin-left: -50px;
+  margin-top: -50px;
+  pointer-events: none;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(255,255,255,0.3) 0%, transparent 60%);
+  z-index: 9999;
+  mix-blend-mode: overlay;
+}
+#audio-toggle {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: rgba(255, 0, 0, 0.85);
+  color: white;
+  border: none;
+  padding: 10px 18px;
+  border-radius: 50px;
+  cursor: pointer;
+  z-index: 9999;
+  box-shadow: 0 0 15px red;
+  transition: transform 0.2s ease;
+}
+#audio-toggle:hover {
+  transform: scale(1.1);
+}
+</style>
+
+
+<style>
+#loading-screen {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background-color: #000;
+  z-index: 99999;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 18px;
+  font-family: 'Segoe UI', sans-serif;
+}
+.loader {
+  border: 6px solid #f3f3f3;
+  border-top: 6px solid #ff0000;
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  animation: spin 1.5s linear infinite;
+}
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+.loading-text {
+  margin-top: 15px;
+  animation: pulse 1s infinite;
+}
+@keyframes pulse {
+  0% { opacity: 1; }
+  50% { opacity: 0.4; }
+  100% { opacity: 1; }
+}
+
+/* Avatar */
+#avatar {
+  position: fixed;
+  top: 15px;
+  left: 15px;
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  border: 3px solid #ff0000;
+  box-shadow: 0 0 15px red;
+  z-index: 9999;
+  cursor: pointer;
+  transition: transform 0.3s;
+}
+#avatar:hover {
+  transform: scale(1.1);
+}
+</style>
+
+<style>
+.fade-in {
+  animation: fadeIn 1.5s ease-in-out forwards;
+  opacity: 0;
+}
+@keyframes fadeIn {
+  to { opacity: 1; }
+}
+#welcome-message {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 28px;
+  font-weight: bold;
+  color: white;
+  z-index: 99999;
+  background: rgba(0, 0, 0, 0.6);
+  padding: 20px 30px;
+  border-radius: 12px;
+  box-shadow: 0 0 15px rgba(255,255,255,0.3);
+  display: none;
+  animation: fadeIn 1.2s ease forwards;
+}
+</style>
+
+
+
+<style>
+#loading-screen {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background-color: #000;
+  z-index: 99999;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 18px;
+  font-family: 'Segoe UI', sans-serif;
+}
+.loader {
+  border: 6px solid #f3f3f3;
+  border-top: 6px solid #ff0000;
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  animation: spin 1.5s linear infinite;
+}
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+.loading-text {
+  margin-top: 15px;
+  animation: pulse 1s infinite;
+}
+@keyframes pulse {
+  0% { opacity: 1; }
+  50% { opacity: 0.4; }
+  100% { opacity: 1; }
+}
+
+/* Avatar */
+#avatar {
+  position: fixed;
+  top: 15px;
+  left: 15px;
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  border: 3px solid #ff0000;
+  box-shadow: 0 0 15px red;
+  z-index: 9999;
+  cursor: pointer;
+  transition: transform 0.3s;
+}
+#avatar:hover {
+  transform: scale(1.1);
+}
+</style>
+
+<style>
+#cursor-light {
+  position: fixed;
+  width: 100px;
+  height: 100px;
+  margin-left: -50px;
+  margin-top: -50px;
+  pointer-events: none;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(255,255,255,0.3) 0%, transparent 60%);
+  z-index: 9999;
+  mix-blend-mode: overlay;
+}
+#audio-toggle {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: rgba(255, 0, 0, 0.85);
+  color: white;
+  border: none;
+  padding: 10px 18px;
+  border-radius: 50px;
+  cursor: pointer;
+  z-index: 9999;
+  box-shadow: 0 0 15px red;
+  transition: transform 0.2s ease;
+}
+#audio-toggle:hover {
+  transform: scale(1.1);
+}
+</style>
+
+
+<style>
+#loading-screen {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background-color: #000;
+  z-index: 99999;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 18px;
+  font-family: 'Segoe UI', sans-serif;
+}
+.loader {
+  border: 6px solid #f3f3f3;
+  border-top: 6px solid #ff0000;
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  animation: spin 1.5s linear infinite;
+}
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+.loading-text {
+  margin-top: 15px;
+  animation: pulse 1s infinite;
+}
+@keyframes pulse {
+  0% { opacity: 1; }
+  50% { opacity: 0.4; }
+  100% { opacity: 1; }
+}
+
+/* Avatar */
+#avatar {
+  position: fixed;
+  top: 15px;
+  left: 15px;
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  border: 3px solid #ff0000;
+  box-shadow: 0 0 15px red;
+  z-index: 9999;
+  cursor: pointer;
+  transition: transform 0.3s;
+}
+#avatar:hover {
+  transform: scale(1.1);
+}
+</style>
+
+<style>
+#login-screen input.correct {
+  border: 2px solid lime;
+  animation: pulseGreen 0.5s ease;
+}
+#login-screen input.incorrect {
+  border: 2px solid red;
+  animation: shake 0.3s ease;
+}
+@keyframes shake {
+  0% { transform: translateX(0); }
+  25% { transform: translateX(-5px); }
+  50% { transform: translateX(5px); }
+  75% { transform: translateX(-5px); }
+  100% { transform: translateX(0); }
+}
+@keyframes pulseGreen {
+  0% { box-shadow: 0 0 0px lime; }
+  100% { box-shadow: 0 0 10px lime; }
+}
+</style>
+
+
+
+
+<style>
+#loading-screen {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background-color: #000;
+  z-index: 99999;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 18px;
+  font-family: 'Segoe UI', sans-serif;
+}
+.loader {
+  border: 6px solid #f3f3f3;
+  border-top: 6px solid #ff0000;
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  animation: spin 1.5s linear infinite;
+}
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+.loading-text {
+  margin-top: 15px;
+  animation: pulse 1s infinite;
+}
+@keyframes pulse {
+  0% { opacity: 1; }
+  50% { opacity: 0.4; }
+  100% { opacity: 1; }
+}
+
+/* Avatar */
+#avatar {
+  position: fixed;
+  top: 15px;
+  left: 15px;
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  border: 3px solid #ff0000;
+  box-shadow: 0 0 15px red;
+  z-index: 9999;
+  cursor: pointer;
+  transition: transform 0.3s;
+}
+#avatar:hover {
+  transform: scale(1.1);
+}
+</style>
+
+<style>
+#cursor-light {
+  position: fixed;
+  width: 100px;
+  height: 100px;
+  margin-left: -50px;
+  margin-top: -50px;
+  pointer-events: none;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(255,255,255,0.3) 0%, transparent 60%);
+  z-index: 9999;
+  mix-blend-mode: overlay;
+}
+#audio-toggle {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: rgba(255, 0, 0, 0.85);
+  color: white;
+  border: none;
+  padding: 10px 18px;
+  border-radius: 50px;
+  cursor: pointer;
+  z-index: 9999;
+  box-shadow: 0 0 15px red;
+  transition: transform 0.2s ease;
+}
+#audio-toggle:hover {
+  transform: scale(1.1);
+}
+</style>
+
+
+<style>
+#loading-screen {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background-color: #000;
+  z-index: 99999;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 18px;
+  font-family: 'Segoe UI', sans-serif;
+}
+.loader {
+  border: 6px solid #f3f3f3;
+  border-top: 6px solid #ff0000;
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  animation: spin 1.5s linear infinite;
+}
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+.loading-text {
+  margin-top: 15px;
+  animation: pulse 1s infinite;
+}
+@keyframes pulse {
+  0% { opacity: 1; }
+  50% { opacity: 0.4; }
+  100% { opacity: 1; }
+}
+
+/* Avatar */
+#avatar {
+  position: fixed;
+  top: 15px;
+  left: 15px;
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  border: 3px solid #ff0000;
+  box-shadow: 0 0 15px red;
+  z-index: 9999;
+  cursor: pointer;
+  transition: transform 0.3s;
+}
+#avatar:hover {
+  transform: scale(1.1);
+}
+</style>
+
+<style>
+.fade-in {
+  animation: fadeIn 1.5s ease-in-out forwards;
+  opacity: 0;
+}
+@keyframes fadeIn {
+  to { opacity: 1; }
+}
+#welcome-message {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 28px;
+  font-weight: bold;
+  color: white;
+  z-index: 99999;
+  background: rgba(0, 0, 0, 0.6);
+  padding: 20px 30px;
+  border-radius: 12px;
+  box-shadow: 0 0 15px rgba(255,255,255,0.3);
+  display: none;
+  animation: fadeIn 1.2s ease forwards;
+}
+</style>
+
+
+
+<style>
+#loading-screen {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background-color: #000;
+  z-index: 99999;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 18px;
+  font-family: 'Segoe UI', sans-serif;
+}
+.loader {
+  border: 6px solid #f3f3f3;
+  border-top: 6px solid #ff0000;
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  animation: spin 1.5s linear infinite;
+}
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+.loading-text {
+  margin-top: 15px;
+  animation: pulse 1s infinite;
+}
+@keyframes pulse {
+  0% { opacity: 1; }
+  50% { opacity: 0.4; }
+  100% { opacity: 1; }
+}
+
+/* Avatar */
+#avatar {
+  position: fixed;
+  top: 15px;
+  left: 15px;
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  border: 3px solid #ff0000;
+  box-shadow: 0 0 15px red;
+  z-index: 9999;
+  cursor: pointer;
+  transition: transform 0.3s;
+}
+#avatar:hover {
+  transform: scale(1.1);
+}
+</style>
+
+<style>
+#cursor-light {
+  position: fixed;
+  width: 100px;
+  height: 100px;
+  margin-left: -50px;
+  margin-top: -50px;
+  pointer-events: none;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(255,255,255,0.3) 0%, transparent 60%);
+  z-index: 9999;
+  mix-blend-mode: overlay;
+}
+#audio-toggle {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: rgba(255, 0, 0, 0.85);
+  color: white;
+  border: none;
+  padding: 10px 18px;
+  border-radius: 50px;
+  cursor: pointer;
+  z-index: 9999;
+  box-shadow: 0 0 15px red;
+  transition: transform 0.2s ease;
+}
+#audio-toggle:hover {
+  transform: scale(1.1);
+}
+</style>
+
+
+<style>
+#loading-screen {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background-color: #000;
+  z-index: 99999;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 18px;
+  font-family: 'Segoe UI', sans-serif;
+}
+.loader {
+  border: 6px solid #f3f3f3;
+  border-top: 6px solid #ff0000;
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  animation: spin 1.5s linear infinite;
+}
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+.loading-text {
+  margin-top: 15px;
+  animation: pulse 1s infinite;
+}
+@keyframes pulse {
+  0% { opacity: 1; }
+  50% { opacity: 0.4; }
+  100% { opacity: 1; }
+}
+
+/* Avatar */
+#avatar {
+  position: fixed;
+  top: 15px;
+  left: 15px;
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  border: 3px solid #ff0000;
+  box-shadow: 0 0 15px red;
+  z-index: 9999;
+  cursor: pointer;
+  transition: transform 0.3s;
+}
+#avatar:hover {
+  transform: scale(1.1);
+}
+</style>
+
+<style>
+#bg-video {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover;
+  z-index: -1;
+}
+</style>
+
+
+
+
+  
+<script>
+function createSnowflake() {
+  const snowflake = document.createElement('div');
+  snowflake.classList.add('snowflake');
+  snowflake.textContent = '❄️';
+  snowflake.style.left = Math.random() * window.innerWidth + 'px';
+  snowflake.style.animationDuration = (Math.random() * 3 + 2) + 's';
+  snowflake.style.fontSize = (Math.random() * 10 + 10) + 'px';
+  document.body.appendChild(snowflake);
+  setTimeout(() => snowflake.remove(), 5000);
+}
+setInterval(createSnowflake, 200);
+</script>
+
+
+
+
+
+
+<style>
+#loading-screen {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background-color: #000;
+  z-index: 99999;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 18px;
+  font-family: 'Segoe UI', sans-serif;
+}
+.loader {
+  border: 6px solid #f3f3f3;
+  border-top: 6px solid #ff0000;
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  animation: spin 1.5s linear infinite;
+}
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+.loading-text {
+  margin-top: 15px;
+  animation: pulse 1s infinite;
+}
+@keyframes pulse {
+  0% { opacity: 1; }
+  50% { opacity: 0.4; }
+  100% { opacity: 1; }
+}
+
+/* Avatar */
+#avatar {
+  position: fixed;
+  top: 15px;
+  left: 15px;
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  border: 3px solid #ff0000;
+  box-shadow: 0 0 15px red;
+  z-index: 9999;
+  cursor: pointer;
+  transition: transform 0.3s;
+}
+#avatar:hover {
+  transform: scale(1.1);
+}
+</style>
+
+<style>
+#cursor-light {
+  position: fixed;
+  width: 100px;
+  height: 100px;
+  margin-left: -50px;
+  margin-top: -50px;
+  pointer-events: none;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(255,255,255,0.3) 0%, transparent 60%);
+  z-index: 9999;
+  mix-blend-mode: overlay;
+}
+#audio-toggle {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: rgba(255, 0, 0, 0.85);
+  color: white;
+  border: none;
+  padding: 10px 18px;
+  border-radius: 50px;
+  cursor: pointer;
+  z-index: 9999;
+  box-shadow: 0 0 15px red;
+  transition: transform 0.2s ease;
+}
+#audio-toggle:hover {
+  transform: scale(1.1);
+}
+</style>
+
+
+<style>
+#loading-screen {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background-color: #000;
+  z-index: 99999;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 18px;
+  font-family: 'Segoe UI', sans-serif;
+}
+.loader {
+  border: 6px solid #f3f3f3;
+  border-top: 6px solid #ff0000;
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  animation: spin 1.5s linear infinite;
+}
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+.loading-text {
+  margin-top: 15px;
+  animation: pulse 1s infinite;
+}
+@keyframes pulse {
+  0% { opacity: 1; }
+  50% { opacity: 0.4; }
+  100% { opacity: 1; }
+}
+
+/* Avatar */
+#avatar {
+  position: fixed;
+  top: 15px;
+  left: 15px;
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  border: 3px solid #ff0000;
+  box-shadow: 0 0 15px red;
+  z-index: 9999;
+  cursor: pointer;
+  transition: transform 0.3s;
+}
+#avatar:hover {
+  transform: scale(1.1);
+}
+</style>
+
+<style>
+.fade-in {
+  animation: fadeIn 1.5s ease-in-out forwards;
+  opacity: 0;
+}
+@keyframes fadeIn {
+  to { opacity: 1; }
+}
+#welcome-message {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 28px;
+  font-weight: bold;
+  color: white;
+  z-index: 99999;
+  background: rgba(0, 0, 0, 0.6);
+  padding: 20px 30px;
+  border-radius: 12px;
+  box-shadow: 0 0 15px rgba(255,255,255,0.3);
+  display: none;
+  animation: fadeIn 1.2s ease forwards;
+}
+</style>
+
+
+
+<style>
+#loading-screen {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background-color: #000;
+  z-index: 99999;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 18px;
+  font-family: 'Segoe UI', sans-serif;
+}
+.loader {
+  border: 6px solid #f3f3f3;
+  border-top: 6px solid #ff0000;
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  animation: spin 1.5s linear infinite;
+}
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+.loading-text {
+  margin-top: 15px;
+  animation: pulse 1s infinite;
+}
+@keyframes pulse {
+  0% { opacity: 1; }
+  50% { opacity: 0.4; }
+  100% { opacity: 1; }
+}
+
+/* Avatar */
+#avatar {
+  position: fixed;
+  top: 15px;
+  left: 15px;
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  border: 3px solid #ff0000;
+  box-shadow: 0 0 15px red;
+  z-index: 9999;
+  cursor: pointer;
+  transition: transform 0.3s;
+}
+#avatar:hover {
+  transform: scale(1.1);
+}
+</style>
+
+<style>
+#cursor-light {
+  position: fixed;
+  width: 100px;
+  height: 100px;
+  margin-left: -50px;
+  margin-top: -50px;
+  pointer-events: none;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(255,255,255,0.3) 0%, transparent 60%);
+  z-index: 9999;
+  mix-blend-mode: overlay;
+}
+#audio-toggle {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: rgba(255, 0, 0, 0.85);
+  color: white;
+  border: none;
+  padding: 10px 18px;
+  border-radius: 50px;
+  cursor: pointer;
+  z-index: 9999;
+  box-shadow: 0 0 15px red;
+  transition: transform 0.2s ease;
+}
+#audio-toggle:hover {
+  transform: scale(1.1);
+}
+</style>
+
+
+<style>
+#loading-screen {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background-color: #000;
+  z-index: 99999;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 18px;
+  font-family: 'Segoe UI', sans-serif;
+}
+.loader {
+  border: 6px solid #f3f3f3;
+  border-top: 6px solid #ff0000;
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  animation: spin 1.5s linear infinite;
+}
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+.loading-text {
+  margin-top: 15px;
+  animation: pulse 1s infinite;
+}
+@keyframes pulse {
+  0% { opacity: 1; }
+  50% { opacity: 0.4; }
+  100% { opacity: 1; }
+}
+
+/* Avatar */
+#avatar {
+  position: fixed;
+  top: 15px;
+  left: 15px;
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  border: 3px solid #ff0000;
+  box-shadow: 0 0 15px red;
+  z-index: 9999;
+  cursor: pointer;
+  transition: transform 0.3s;
+}
+#avatar:hover {
+  transform: scale(1.1);
+}
+</style>
+
+<style>
+#login-screen input.correct {
+  border: 2px solid lime;
+  animation: pulseGreen 0.5s ease;
+}
+#login-screen input.incorrect {
+  border: 2px solid red;
+  animation: shake 0.3s ease;
+}
+@keyframes shake {
+  0% { transform: translateX(0); }
+  25% { transform: translateX(-5px); }
+  50% { transform: translateX(5px); }
+  75% { transform: translateX(-5px); }
+  100% { transform: translateX(0); }
+}
+@keyframes pulseGreen {
+  0% { box-shadow: 0 0 0px lime; }
+  100% { box-shadow: 0 0 10px lime; }
+}
+</style>
+
+
+
+
+<style>
+#loading-screen {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background-color: #000;
+  z-index: 99999;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 18px;
+  font-family: 'Segoe UI', sans-serif;
+}
+.loader {
+  border: 6px solid #f3f3f3;
+  border-top: 6px solid #ff0000;
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  animation: spin 1.5s linear infinite;
+}
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+.loading-text {
+  margin-top: 15px;
+  animation: pulse 1s infinite;
+}
+@keyframes pulse {
+  0% { opacity: 1; }
+  50% { opacity: 0.4; }
+  100% { opacity: 1; }
+}
+
+/* Avatar */
+#avatar {
+  position: fixed;
+  top: 15px;
+  left: 15px;
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  border: 3px solid #ff0000;
+  box-shadow: 0 0 15px red;
+  z-index: 9999;
+  cursor: pointer;
+  transition: transform 0.3s;
+}
+#avatar:hover {
+  transform: scale(1.1);
+}
+</style>
+
+<style>
+#cursor-light {
+  position: fixed;
+  width: 100px;
+  height: 100px;
+  margin-left: -50px;
+  margin-top: -50px;
+  pointer-events: none;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(255,255,255,0.3) 0%, transparent 60%);
+  z-index: 9999;
+  mix-blend-mode: overlay;
+}
+#audio-toggle {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: rgba(255, 0, 0, 0.85);
+  color: white;
+  border: none;
+  padding: 10px 18px;
+  border-radius: 50px;
+  cursor: pointer;
+  z-index: 9999;
+  box-shadow: 0 0 15px red;
+  transition: transform 0.2s ease;
+}
+#audio-toggle:hover {
+  transform: scale(1.1);
+}
+</style>
+
+
+<style>
+#loading-screen {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background-color: #000;
+  z-index: 99999;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 18px;
+  font-family: 'Segoe UI', sans-serif;
+}
+.loader {
+  border: 6px solid #f3f3f3;
+  border-top: 6px solid #ff0000;
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  animation: spin 1.5s linear infinite;
+}
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+.loading-text {
+  margin-top: 15px;
+  animation: pulse 1s infinite;
+}
+@keyframes pulse {
+  0% { opacity: 1; }
+  50% { opacity: 0.4; }
+  100% { opacity: 1; }
+}
+
+/* Avatar */
+#avatar {
+  position: fixed;
+  top: 15px;
+  left: 15px;
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  border: 3px solid #ff0000;
+  box-shadow: 0 0 15px red;
+  z-index: 9999;
+  cursor: pointer;
+  transition: transform 0.3s;
+}
+#avatar:hover {
+  transform: scale(1.1);
+}
+</style>
+
+<style>
+.fade-in {
+  animation: fadeIn 1.5s ease-in-out forwards;
+  opacity: 0;
+}
+@keyframes fadeIn {
+  to { opacity: 1; }
+}
+#welcome-message {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 28px;
+  font-weight: bold;
+  color: white;
+  z-index: 99999;
+  background: rgba(0, 0, 0, 0.6);
+  padding: 20px 30px;
+  border-radius: 12px;
+  box-shadow: 0 0 15px rgba(255,255,255,0.3);
+  display: none;
+  animation: fadeIn 1.2s ease forwards;
+}
+</style>
+
+
+
+<style>
+#loading-screen {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background-color: #000;
+  z-index: 99999;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 18px;
+  font-family: 'Segoe UI', sans-serif;
+}
+.loader {
+  border: 6px solid #f3f3f3;
+  border-top: 6px solid #ff0000;
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  animation: spin 1.5s linear infinite;
+}
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+.loading-text {
+  margin-top: 15px;
+  animation: pulse 1s infinite;
+}
+@keyframes pulse {
+  0% { opacity: 1; }
+  50% { opacity: 0.4; }
+  100% { opacity: 1; }
+}
+
+/* Avatar */
+#avatar {
+  position: fixed;
+  top: 15px;
+  left: 15px;
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  border: 3px solid #ff0000;
+  box-shadow: 0 0 15px red;
+  z-index: 9999;
+  cursor: pointer;
+  transition: transform 0.3s;
+}
+#avatar:hover {
+  transform: scale(1.1);
+}
+</style>
+
+<style>
+#cursor-light {
+  position: fixed;
+  width: 100px;
+  height: 100px;
+  margin-left: -50px;
+  margin-top: -50px;
+  pointer-events: none;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(255,255,255,0.3) 0%, transparent 60%);
+  z-index: 9999;
+  mix-blend-mode: overlay;
+}
+#audio-toggle {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: rgba(255, 0, 0, 0.85);
+  color: white;
+  border: none;
+  padding: 10px 18px;
+  border-radius: 50px;
+  cursor: pointer;
+  z-index: 9999;
+  box-shadow: 0 0 15px red;
+  transition: transform 0.2s ease;
+}
+#audio-toggle:hover {
+  transform: scale(1.1);
+}
+</style>
+
+
+<style>
+#loading-screen {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background-color: #000;
+  z-index: 99999;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 18px;
+  font-family: 'Segoe UI', sans-serif;
+}
+.loader {
+  border: 6px solid #f3f3f3;
+  border-top: 6px solid #ff0000;
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  animation: spin 1.5s linear infinite;
+}
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+.loading-text {
+  margin-top: 15px;
+  animation: pulse 1s infinite;
+}
+@keyframes pulse {
+  0% { opacity: 1; }
+  50% { opacity: 0.4; }
+  100% { opacity: 1; }
+}
+
+/* Avatar */
+#avatar {
+  position: fixed;
+  top: 15px;
+  left: 15px;
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  border: 3px solid #ff0000;
+  box-shadow: 0 0 15px red;
+  z-index: 9999;
+  cursor: pointer;
+  transition: transform 0.3s;
+}
+#avatar:hover {
+  transform: scale(1.1);
+}
+</style>
+
+<style>
+.shooting-star {
+  position: fixed;
+  top: 0;
+  width: 2px;
+  height: 100px;
+  background: linear-gradient(180deg, white, transparent);
+  opacity: 0.8;
+  z-index: 9999;
+  pointer-events: none;
+  transform: rotate(45deg);
+  animation: shooting linear 1s forwards;
+}
+@keyframes shooting {
+  0% {
+    top: -10%;
+    left: calc(100% * var(--start-x));
+    opacity: 1;
+  }
+  100% {
+    top: 100%;
+    left: calc(100% * var(--end-x));
+    opacity: 0;
+  }
+}
+</style>
+<script>
+function createShootingStar() {
+  const star = document.createElement("div");
+  star.classList.add("shooting-star");
+  const startX = Math.random();
+  const endX = startX + (Math.random() * 0.2 - 0.1);
+  star.style.setProperty('--start-x', startX);
+  star.style.setProperty('--end-x', endX);
+  document.body.appendChild(star);
+  setTimeout(() => star.remove(), 1000);
+}
+setInterval(createShootingStar, 3000);
+</script>
+
+
+
+
+
+
+<style>
+#loading-screen {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background-color: #000;
+  z-index: 99999;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 18px;
+  font-family: 'Segoe UI', sans-serif;
+}
+.loader {
+  border: 6px solid #f3f3f3;
+  border-top: 6px solid #ff0000;
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  animation: spin 1.5s linear infinite;
+}
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+.loading-text {
+  margin-top: 15px;
+  animation: pulse 1s infinite;
+}
+@keyframes pulse {
+  0% { opacity: 1; }
+  50% { opacity: 0.4; }
+  100% { opacity: 1; }
+}
+
+/* Avatar */
+#avatar {
+  position: fixed;
+  top: 15px;
+  left: 15px;
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  border: 3px solid #ff0000;
+  box-shadow: 0 0 15px red;
+  z-index: 9999;
+  cursor: pointer;
+  transition: transform 0.3s;
+}
+#avatar:hover {
+  transform: scale(1.1);
+}
+</style>
+
+<style>
+#cursor-light {
+  position: fixed;
+  width: 100px;
+  height: 100px;
+  margin-left: -50px;
+  margin-top: -50px;
+  pointer-events: none;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(255,255,255,0.3) 0%, transparent 60%);
+  z-index: 9999;
+  mix-blend-mode: overlay;
+}
+#audio-toggle {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: rgba(255, 0, 0, 0.85);
+  color: white;
+  border: none;
+  padding: 10px 18px;
+  border-radius: 50px;
+  cursor: pointer;
+  z-index: 9999;
+  box-shadow: 0 0 15px red;
+  transition: transform 0.2s ease;
+}
+#audio-toggle:hover {
+  transform: scale(1.1);
+}
+</style>
+
+
+<style>
+#loading-screen {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background-color: #000;
+  z-index: 99999;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 18px;
+  font-family: 'Segoe UI', sans-serif;
+}
+.loader {
+  border: 6px solid #f3f3f3;
+  border-top: 6px solid #ff0000;
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  animation: spin 1.5s linear infinite;
+}
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+.loading-text {
+  margin-top: 15px;
+  animation: pulse 1s infinite;
+}
+@keyframes pulse {
+  0% { opacity: 1; }
+  50% { opacity: 0.4; }
+  100% { opacity: 1; }
+}
+
+/* Avatar */
+#avatar {
+  position: fixed;
+  top: 15px;
+  left: 15px;
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  border: 3px solid #ff0000;
+  box-shadow: 0 0 15px red;
+  z-index: 9999;
+  cursor: pointer;
+  transition: transform 0.3s;
+}
+#avatar:hover {
+  transform: scale(1.1);
+}
+</style>
+
+<style>
+.fade-in {
+  animation: fadeIn 1.5s ease-in-out forwards;
+  opacity: 0;
+}
+@keyframes fadeIn {
+  to { opacity: 1; }
+}
+#welcome-message {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 28px;
+  font-weight: bold;
+  color: white;
+  z-index: 99999;
+  background: rgba(0, 0, 0, 0.6);
+  padding: 20px 30px;
+  border-radius: 12px;
+  box-shadow: 0 0 15px rgba(255,255,255,0.3);
+  display: none;
+  animation: fadeIn 1.2s ease forwards;
+}
+</style>
+
+
+
+<style>
+#loading-screen {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background-color: #000;
+  z-index: 99999;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 18px;
+  font-family: 'Segoe UI', sans-serif;
+}
+.loader {
+  border: 6px solid #f3f3f3;
+  border-top: 6px solid #ff0000;
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  animation: spin 1.5s linear infinite;
+}
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+.loading-text {
+  margin-top: 15px;
+  animation: pulse 1s infinite;
+}
+@keyframes pulse {
+  0% { opacity: 1; }
+  50% { opacity: 0.4; }
+  100% { opacity: 1; }
+}
+
+/* Avatar */
+#avatar {
+  position: fixed;
+  top: 15px;
+  left: 15px;
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  border: 3px solid #ff0000;
+  box-shadow: 0 0 15px red;
+  z-index: 9999;
+  cursor: pointer;
+  transition: transform 0.3s;
+}
+#avatar:hover {
+  transform: scale(1.1);
+}
+</style>
+
+<style>
+#cursor-light {
+  position: fixed;
+  width: 100px;
+  height: 100px;
+  margin-left: -50px;
+  margin-top: -50px;
+  pointer-events: none;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(255,255,255,0.3) 0%, transparent 60%);
+  z-index: 9999;
+  mix-blend-mode: overlay;
+}
+#audio-toggle {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: rgba(255, 0, 0, 0.85);
+  color: white;
+  border: none;
+  padding: 10px 18px;
+  border-radius: 50px;
+  cursor: pointer;
+  z-index: 9999;
+  box-shadow: 0 0 15px red;
+  transition: transform 0.2s ease;
+}
+#audio-toggle:hover {
+  transform: scale(1.1);
+}
+</style>
+
+
+<style>
+#loading-screen {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background-color: #000;
+  z-index: 99999;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 18px;
+  font-family: 'Segoe UI', sans-serif;
+}
+.loader {
+  border: 6px solid #f3f3f3;
+  border-top: 6px solid #ff0000;
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  animation: spin 1.5s linear infinite;
+}
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+.loading-text {
+  margin-top: 15px;
+  animation: pulse 1s infinite;
+}
+@keyframes pulse {
+  0% { opacity: 1; }
+  50% { opacity: 0.4; }
+  100% { opacity: 1; }
+}
+
+/* Avatar */
+#avatar {
+  position: fixed;
+  top: 15px;
+  left: 15px;
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  border: 3px solid #ff0000;
+  box-shadow: 0 0 15px red;
+  z-index: 9999;
+  cursor: pointer;
+  transition: transform 0.3s;
+}
+#avatar:hover {
+  transform: scale(1.1);
+}
+</style>
+
+<style>
+#login-screen input.correct {
+  border: 2px solid lime;
+  animation: pulseGreen 0.5s ease;
+}
+#login-screen input.incorrect {
+  border: 2px solid red;
+  animation: shake 0.3s ease;
+}
+@keyframes shake {
+  0% { transform: translateX(0); }
+  25% { transform: translateX(-5px); }
+  50% { transform: translateX(5px); }
+  75% { transform: translateX(-5px); }
+  100% { transform: translateX(0); }
+}
+@keyframes pulseGreen {
+  0% { box-shadow: 0 0 0px lime; }
+  100% { box-shadow: 0 0 10px lime; }
+}
+</style>
+
+
+
+
+<style>
+#loading-screen {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background-color: #000;
+  z-index: 99999;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 18px;
+  font-family: 'Segoe UI', sans-serif;
+}
+.loader {
+  border: 6px solid #f3f3f3;
+  border-top: 6px solid #ff0000;
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  animation: spin 1.5s linear infinite;
+}
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+.loading-text {
+  margin-top: 15px;
+  animation: pulse 1s infinite;
+}
+@keyframes pulse {
+  0% { opacity: 1; }
+  50% { opacity: 0.4; }
+  100% { opacity: 1; }
+}
+
+/* Avatar */
+#avatar {
+  position: fixed;
+  top: 15px;
+  left: 15px;
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  border: 3px solid #ff0000;
+  box-shadow: 0 0 15px red;
+  z-index: 9999;
+  cursor: pointer;
+  transition: transform 0.3s;
+}
+#avatar:hover {
+  transform: scale(1.1);
+}
+</style>
+
+<style>
+#cursor-light {
+  position: fixed;
+  width: 100px;
+  height: 100px;
+  margin-left: -50px;
+  margin-top: -50px;
+  pointer-events: none;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(255,255,255,0.3) 0%, transparent 60%);
+  z-index: 9999;
+  mix-blend-mode: overlay;
+}
+#audio-toggle {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: rgba(255, 0, 0, 0.85);
+  color: white;
+  border: none;
+  padding: 10px 18px;
+  border-radius: 50px;
+  cursor: pointer;
+  z-index: 9999;
+  box-shadow: 0 0 15px red;
+  transition: transform 0.2s ease;
+}
+#audio-toggle:hover {
+  transform: scale(1.1);
+}
+</style>
+
+
+<style>
+#loading-screen {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background-color: #000;
+  z-index: 99999;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 18px;
+  font-family: 'Segoe UI', sans-serif;
+}
+.loader {
+  border: 6px solid #f3f3f3;
+  border-top: 6px solid #ff0000;
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  animation: spin 1.5s linear infinite;
+}
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+.loading-text {
+  margin-top: 15px;
+  animation: pulse 1s infinite;
+}
+@keyframes pulse {
+  0% { opacity: 1; }
+  50% { opacity: 0.4; }
+  100% { opacity: 1; }
+}
+
+/* Avatar */
+#avatar {
+  position: fixed;
+  top: 15px;
+  left: 15px;
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  border: 3px solid #ff0000;
+  box-shadow: 0 0 15px red;
+  z-index: 9999;
+  cursor: pointer;
+  transition: transform 0.3s;
+}
+#avatar:hover {
+  transform: scale(1.1);
+}
+</style>
+
+<style>
+.fade-in {
+  animation: fadeIn 1.5s ease-in-out forwards;
+  opacity: 0;
+}
+@keyframes fadeIn {
+  to { opacity: 1; }
+}
+#welcome-message {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 28px;
+  font-weight: bold;
+  color: white;
+  z-index: 99999;
+  background: rgba(0, 0, 0, 0.6);
+  padding: 20px 30px;
+  border-radius: 12px;
+  box-shadow: 0 0 15px rgba(255,255,255,0.3);
+  display: none;
+  animation: fadeIn 1.2s ease forwards;
+}
+</style>
+
+
+
+<style>
+#loading-screen {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background-color: #000;
+  z-index: 99999;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 18px;
+  font-family: 'Segoe UI', sans-serif;
+}
+.loader {
+  border: 6px solid #f3f3f3;
+  border-top: 6px solid #ff0000;
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  animation: spin 1.5s linear infinite;
+}
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+.loading-text {
+  margin-top: 15px;
+  animation: pulse 1s infinite;
+}
+@keyframes pulse {
+  0% { opacity: 1; }
+  50% { opacity: 0.4; }
+  100% { opacity: 1; }
+}
+
+/* Avatar */
+#avatar {
+  position: fixed;
+  top: 15px;
+  left: 15px;
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  border: 3px solid #ff0000;
+  box-shadow: 0 0 15px red;
+  z-index: 9999;
+  cursor: pointer;
+  transition: transform 0.3s;
+}
+#avatar:hover {
+  transform: scale(1.1);
+}
+</style>
+
+<style>
+#cursor-light {
+  position: fixed;
+  width: 100px;
+  height: 100px;
+  margin-left: -50px;
+  margin-top: -50px;
+  pointer-events: none;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(255,255,255,0.3) 0%, transparent 60%);
+  z-index: 9999;
+  mix-blend-mode: overlay;
+}
+#audio-toggle {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: rgba(255, 0, 0, 0.85);
+  color: white;
+  border: none;
+  padding: 10px 18px;
+  border-radius: 50px;
+  cursor: pointer;
+  z-index: 9999;
+  box-shadow: 0 0 15px red;
+  transition: transform 0.2s ease;
+}
+#audio-toggle:hover {
+  transform: scale(1.1);
+}
+</style>
+
+
+<style>
+#loading-screen {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background-color: #000;
+  z-index: 99999;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 18px;
+  font-family: 'Segoe UI', sans-serif;
+}
+.loader {
+  border: 6px solid #f3f3f3;
+  border-top: 6px solid #ff0000;
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  animation: spin 1.5s linear infinite;
+}
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+.loading-text {
+  margin-top: 15px;
+  animation: pulse 1s infinite;
+}
+@keyframes pulse {
+  0% { opacity: 1; }
+  50% { opacity: 0.4; }
+  100% { opacity: 1; }
+}
+
+/* Avatar */
+#avatar {
+  position: fixed;
+  top: 15px;
+  left: 15px;
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  border: 3px solid #ff0000;
+  box-shadow: 0 0 15px red;
+  z-index: 9999;
+  cursor: pointer;
+  transition: transform 0.3s;
+}
+#avatar:hover {
+  transform: scale(1.1);
+}
+</style>
+
+<style>
+#battery-status {
+  position: fixed;
+  bottom: 10px;
+  left: 10px;
+  color: white;
+  background: rgba(0,0,0,0.5);
+  padding: 6px 12px;
+  border-radius: 8px;
+  font-size: 14px;
+  font-family: Arial, sans-serif;
+  z-index: 9999;
+  backdrop-filter: blur(4px);
+}
+</style>
+<div id="battery-status">🔋 Pin: --%</div>
+<script>
+navigator.getBattery().then(function(battery) {
+  function updateBatteryStatus() {
+    const level = Math.round(battery.level * 100);
+    document.getElementById('battery-status').textContent = '🔋 Pin: ' + level + '%';
+  }
+  updateBatteryStatus();
+  battery.addEventListener('levelchange', updateBatteryStatus);
+});
+</script>
+
+
+
+
+
+
+<style>
+#loading-screen {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background-color: #000;
+  z-index: 99999;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 18px;
+  font-family: 'Segoe UI', sans-serif;
+}
+.loader {
+  border: 6px solid #f3f3f3;
+  border-top: 6px solid #ff0000;
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  animation: spin 1.5s linear infinite;
+}
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+.loading-text {
+  margin-top: 15px;
+  animation: pulse 1s infinite;
+}
+@keyframes pulse {
+  0% { opacity: 1; }
+  50% { opacity: 0.4; }
+  100% { opacity: 1; }
+}
+
+/* Avatar */
+#avatar {
+  position: fixed;
+  top: 15px;
+  left: 15px;
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  border: 3px solid #ff0000;
+  box-shadow: 0 0 15px red;
+  z-index: 9999;
+  cursor: pointer;
+  transition: transform 0.3s;
+}
+#avatar:hover {
+  transform: scale(1.1);
+}
+</style>
+
+<style>
+#cursor-light {
+  position: fixed;
+  width: 100px;
+  height: 100px;
+  margin-left: -50px;
+  margin-top: -50px;
+  pointer-events: none;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(255,255,255,0.3) 0%, transparent 60%);
+  z-index: 9999;
+  mix-blend-mode: overlay;
+}
+#audio-toggle {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: rgba(255, 0, 0, 0.85);
+  color: white;
+  border: none;
+  padding: 10px 18px;
+  border-radius: 50px;
+  cursor: pointer;
+  z-index: 9999;
+  box-shadow: 0 0 15px red;
+  transition: transform 0.2s ease;
+}
+#audio-toggle:hover {
+  transform: scale(1.1);
+}
+</style>
+
+
+<style>
+#loading-screen {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background-color: #000;
+  z-index: 99999;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 18px;
+  font-family: 'Segoe UI', sans-serif;
+}
+.loader {
+  border: 6px solid #f3f3f3;
+  border-top: 6px solid #ff0000;
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  animation: spin 1.5s linear infinite;
+}
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+.loading-text {
+  margin-top: 15px;
+  animation: pulse 1s infinite;
+}
+@keyframes pulse {
+  0% { opacity: 1; }
+  50% { opacity: 0.4; }
+  100% { opacity: 1; }
+}
+
+/* Avatar */
+#avatar {
+  position: fixed;
+  top: 15px;
+  left: 15px;
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  border: 3px solid #ff0000;
+  box-shadow: 0 0 15px red;
+  z-index: 9999;
+  cursor: pointer;
+  transition: transform 0.3s;
+}
+#avatar:hover {
+  transform: scale(1.1);
+}
+</style>
+
+<style>
+.fade-in {
+  animation: fadeIn 1.5s ease-in-out forwards;
+  opacity: 0;
+}
+@keyframes fadeIn {
+  to { opacity: 1; }
+}
+#welcome-message {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 28px;
+  font-weight: bold;
+  color: white;
+  z-index: 99999;
+  background: rgba(0, 0, 0, 0.6);
+  padding: 20px 30px;
+  border-radius: 12px;
+  box-shadow: 0 0 15px rgba(255,255,255,0.3);
+  display: none;
+  animation: fadeIn 1.2s ease forwards;
+}
+</style>
+
+
+
+<style>
+#loading-screen {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background-color: #000;
+  z-index: 99999;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 18px;
+  font-family: 'Segoe UI', sans-serif;
+}
+.loader {
+  border: 6px solid #f3f3f3;
+  border-top: 6px solid #ff0000;
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  animation: spin 1.5s linear infinite;
+}
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+.loading-text {
+  margin-top: 15px;
+  animation: pulse 1s infinite;
+}
+@keyframes pulse {
+  0% { opacity: 1; }
+  50% { opacity: 0.4; }
+  100% { opacity: 1; }
+}
+
+/* Avatar */
+#avatar {
+  position: fixed;
+  top: 15px;
+  left: 15px;
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  border: 3px solid #ff0000;
+  box-shadow: 0 0 15px red;
+  z-index: 9999;
+  cursor: pointer;
+  transition: transform 0.3s;
+}
+#avatar:hover {
+  transform: scale(1.1);
+}
+</style>
+
+<style>
+#cursor-light {
+  position: fixed;
+  width: 100px;
+  height: 100px;
+  margin-left: -50px;
+  margin-top: -50px;
+  pointer-events: none;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(255,255,255,0.3) 0%, transparent 60%);
+  z-index: 9999;
+  mix-blend-mode: overlay;
+}
+#audio-toggle {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: rgba(255, 0, 0, 0.85);
+  color: white;
+  border: none;
+  padding: 10px 18px;
+  border-radius: 50px;
+  cursor: pointer;
+  z-index: 9999;
+  box-shadow: 0 0 15px red;
+  transition: transform 0.2s ease;
+}
+#audio-toggle:hover {
+  transform: scale(1.1);
+}
+</style>
+
+
+<style>
+#loading-screen {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background-color: #000;
+  z-index: 99999;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 18px;
+  font-family: 'Segoe UI', sans-serif;
+}
+.loader {
+  border: 6px solid #f3f3f3;
+  border-top: 6px solid #ff0000;
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  animation: spin 1.5s linear infinite;
+}
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+.loading-text {
+  margin-top: 15px;
+  animation: pulse 1s infinite;
+}
+@keyframes pulse {
+  0% { opacity: 1; }
+  50% { opacity: 0.4; }
+  100% { opacity: 1; }
+}
+
+/* Avatar */
+#avatar {
+  position: fixed;
+  top: 15px;
+  left: 15px;
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  border: 3px solid #ff0000;
+  box-shadow: 0 0 15px red;
+  z-index: 9999;
+  cursor: pointer;
+  transition: transform 0.3s;
+}
+#avatar:hover {
+  transform: scale(1.1);
+}
+</style>
+
+<style>
+#login-screen input.correct {
+  border: 2px solid lime;
+  animation: pulseGreen 0.5s ease;
+}
+#login-screen input.incorrect {
+  border: 2px solid red;
+  animation: shake 0.3s ease;
+}
+@keyframes shake {
+  0% { transform: translateX(0); }
+  25% { transform: translateX(-5px); }
+  50% { transform: translateX(5px); }
+  75% { transform: translateX(-5px); }
+  100% { transform: translateX(0); }
+}
+@keyframes pulseGreen {
+  0% { box-shadow: 0 0 0px lime; }
+  100% { box-shadow: 0 0 10px lime; }
+}
+</style>
+
+
+
+
+<style>
+#loading-screen {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background-color: #000;
+  z-index: 99999;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 18px;
+  font-family: 'Segoe UI', sans-serif;
+}
+.loader {
+  border: 6px solid #f3f3f3;
+  border-top: 6px solid #ff0000;
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  animation: spin 1.5s linear infinite;
+}
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+.loading-text {
+  margin-top: 15px;
+  animation: pulse 1s infinite;
+}
+@keyframes pulse {
+  0% { opacity: 1; }
+  50% { opacity: 0.4; }
+  100% { opacity: 1; }
+}
+
+/* Avatar */
+#avatar {
+  position: fixed;
+  top: 15px;
+  left: 15px;
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  border: 3px solid #ff0000;
+  box-shadow: 0 0 15px red;
+  z-index: 9999;
+  cursor: pointer;
+  transition: transform 0.3s;
+}
+#avatar:hover {
+  transform: scale(1.1);
+}
+</style>
+
+<style>
+#cursor-light {
+  position: fixed;
+  width: 100px;
+  height: 100px;
+  margin-left: -50px;
+  margin-top: -50px;
+  pointer-events: none;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(255,255,255,0.3) 0%, transparent 60%);
+  z-index: 9999;
+  mix-blend-mode: overlay;
+}
+#audio-toggle {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: rgba(255, 0, 0, 0.85);
+  color: white;
+  border: none;
+  padding: 10px 18px;
+  border-radius: 50px;
+  cursor: pointer;
+  z-index: 9999;
+  box-shadow: 0 0 15px red;
+  transition: transform 0.2s ease;
+}
+#audio-toggle:hover {
+  transform: scale(1.1);
+}
+</style>
+
+
+<style>
+#loading-screen {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background-color: #000;
+  z-index: 99999;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 18px;
+  font-family: 'Segoe UI', sans-serif;
+}
+.loader {
+  border: 6px solid #f3f3f3;
+  border-top: 6px solid #ff0000;
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  animation: spin 1.5s linear infinite;
+}
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+.loading-text {
+  margin-top: 15px;
+  animation: pulse 1s infinite;
+}
+@keyframes pulse {
+  0% { opacity: 1; }
+  50% { opacity: 0.4; }
+  100% { opacity: 1; }
+}
+
+/* Avatar */
+#avatar {
+  position: fixed;
+  top: 15px;
+  left: 15px;
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  border: 3px solid #ff0000;
+  box-shadow: 0 0 15px red;
+  z-index: 9999;
+  cursor: pointer;
+  transition: transform 0.3s;
+}
+#avatar:hover {
+  transform: scale(1.1);
+}
+</style>
+
+<style>
+.fade-in {
+  animation: fadeIn 1.5s ease-in-out forwards;
+  opacity: 0;
+}
+@keyframes fadeIn {
+  to { opacity: 1; }
+}
+#welcome-message {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 28px;
+  font-weight: bold;
+  color: white;
+  z-index: 99999;
+  background: rgba(0, 0, 0, 0.6);
+  padding: 20px 30px;
+  border-radius: 12px;
+  box-shadow: 0 0 15px rgba(255,255,255,0.3);
+  display: none;
+  animation: fadeIn 1.2s ease forwards;
+}
+</style>
+
+
+
+<style>
+#loading-screen {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background-color: #000;
+  z-index: 99999;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 18px;
+  font-family: 'Segoe UI', sans-serif;
+}
+.loader {
+  border: 6px solid #f3f3f3;
+  border-top: 6px solid #ff0000;
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  animation: spin 1.5s linear infinite;
+}
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+.loading-text {
+  margin-top: 15px;
+  animation: pulse 1s infinite;
+}
+@keyframes pulse {
+  0% { opacity: 1; }
+  50% { opacity: 0.4; }
+  100% { opacity: 1; }
+}
+
+/* Avatar */
+#avatar {
+  position: fixed;
+  top: 15px;
+  left: 15px;
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  border: 3px solid #ff0000;
+  box-shadow: 0 0 15px red;
+  z-index: 9999;
+  cursor: pointer;
+  transition: transform 0.3s;
+}
+#avatar:hover {
+  transform: scale(1.1);
+}
+</style>
+
+<style>
+#cursor-light {
+  position: fixed;
+  width: 100px;
+  height: 100px;
+  margin-left: -50px;
+  margin-top: -50px;
+  pointer-events: none;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(255,255,255,0.3) 0%, transparent 60%);
+  z-index: 9999;
+  mix-blend-mode: overlay;
+}
+#audio-toggle {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: rgba(255, 0, 0, 0.85);
+  color: white;
+  border: none;
+  padding: 10px 18px;
+  border-radius: 50px;
+  cursor: pointer;
+  z-index: 9999;
+  box-shadow: 0 0 15px red;
+  transition: transform 0.2s ease;
+}
+#audio-toggle:hover {
+  transform: scale(1.1);
+}
+</style>
+
+
+<style>
+#loading-screen {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background-color: #000;
+  z-index: 99999;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 18px;
+  font-family: 'Segoe UI', sans-serif;
+}
+.loader {
+  border: 6px solid #f3f3f3;
+  border-top: 6px solid #ff0000;
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  animation: spin 1.5s linear infinite;
+}
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+.loading-text {
+  margin-top: 15px;
+  animation: pulse 1s infinite;
+}
+@keyframes pulse {
+  0% { opacity: 1; }
+  50% { opacity: 0.4; }
+  100% { opacity: 1; }
+}
+
+/* Avatar */
+#avatar {
+  position: fixed;
+  top: 15px;
+  left: 15px;
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  border: 3px solid #ff0000;
+  box-shadow: 0 0 15px red;
+  z-index: 9999;
+  cursor: pointer;
+  transition: transform 0.3s;
+}
+#avatar:hover {
+  transform: scale(1.1);
+}
+</style>
+
+<style>
+#low-battery-popup {
+  position: fixed;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: rgba(255, 0, 0, 0.85);
+  color: white;
+  padding: 16px 24px;
+  border-radius: 10px;
+  font-family: Arial, sans-serif;
+  font-size: 16px;
+  box-shadow: 0 0 10px red;
+  z-index: 10000;
+  display: none;
+}
+#low-battery-popup button {
+  margin-left: 20px;
+  background: white;
+  color: red;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+}
+</style>
+<div id="low-battery-popup">
+  ⚠️ Pin của bạn dưới 20%. Hãy sạc thiết bị sớm!
+  <button onclick="document.getElementById('low-battery-popup').style.display='none'">Đóng</button>
+</div>
+<script>
+navigator.getBattery().then(function(battery) {
+  function checkBatteryLevel() {
+    const level = battery.level * 100;
+    if (level < 20) {
+      document.getElementById('low-battery-popup').style.display = 'block';
+    }
+  }
+  checkBatteryLevel();
+  battery.addEventListener('levelchange', checkBatteryLevel);
+});
+</script>
+
+
+
+
+
+
+<style>
+#loading-screen {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background-color: #000;
+  z-index: 99999;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 18px;
+  font-family: 'Segoe UI', sans-serif;
+}
+.loader {
+  border: 6px solid #f3f3f3;
+  border-top: 6px solid #ff0000;
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  animation: spin 1.5s linear infinite;
+}
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+.loading-text {
+  margin-top: 15px;
+  animation: pulse 1s infinite;
+}
+@keyframes pulse {
+  0% { opacity: 1; }
+  50% { opacity: 0.4; }
+  100% { opacity: 1; }
+}
+
+/* Avatar */
+#avatar {
+  position: fixed;
+  top: 15px;
+  left: 15px;
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  border: 3px solid #ff0000;
+  box-shadow: 0 0 15px red;
+  z-index: 9999;
+  cursor: pointer;
+  transition: transform 0.3s;
+}
+#avatar:hover {
+  transform: scale(1.1);
+}
+</style>
+
+<style>
+#cursor-light {
+  position: fixed;
+  width: 100px;
+  height: 100px;
+  margin-left: -50px;
+  margin-top: -50px;
+  pointer-events: none;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(255,255,255,0.3) 0%, transparent 60%);
+  z-index: 9999;
+  mix-blend-mode: overlay;
+}
+#audio-toggle {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: rgba(255, 0, 0, 0.85);
+  color: white;
+  border: none;
+  padding: 10px 18px;
+  border-radius: 50px;
+  cursor: pointer;
+  z-index: 9999;
+  box-shadow: 0 0 15px red;
+  transition: transform 0.2s ease;
+}
+#audio-toggle:hover {
+  transform: scale(1.1);
+}
+</style>
+
+
+<style>
+#loading-screen {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background-color: #000;
+  z-index: 99999;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 18px;
+  font-family: 'Segoe UI', sans-serif;
+}
+.loader {
+  border: 6px solid #f3f3f3;
+  border-top: 6px solid #ff0000;
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  animation: spin 1.5s linear infinite;
+}
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+.loading-text {
+  margin-top: 15px;
+  animation: pulse 1s infinite;
+}
+@keyframes pulse {
+  0% { opacity: 1; }
+  50% { opacity: 0.4; }
+  100% { opacity: 1; }
+}
+
+/* Avatar */
+#avatar {
+  position: fixed;
+  top: 15px;
+  left: 15px;
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  border: 3px solid #ff0000;
+  box-shadow: 0 0 15px red;
+  z-index: 9999;
+  cursor: pointer;
+  transition: transform 0.3s;
+}
+#avatar:hover {
+  transform: scale(1.1);
+}
+</style>
+
+<style>
+.fade-in {
+  animation: fadeIn 1.5s ease-in-out forwards;
+  opacity: 0;
+}
+@keyframes fadeIn {
+  to { opacity: 1; }
+}
+#welcome-message {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 28px;
+  font-weight: bold;
+  color: white;
+  z-index: 99999;
+  background: rgba(0, 0, 0, 0.6);
+  padding: 20px 30px;
+  border-radius: 12px;
+  box-shadow: 0 0 15px rgba(255,255,255,0.3);
+  display: none;
+  animation: fadeIn 1.2s ease forwards;
+}
+</style>
+
+
+
+<style>
+#loading-screen {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background-color: #000;
+  z-index: 99999;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 18px;
+  font-family: 'Segoe UI', sans-serif;
+}
+.loader {
+  border: 6px solid #f3f3f3;
+  border-top: 6px solid #ff0000;
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  animation: spin 1.5s linear infinite;
+}
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+.loading-text {
+  margin-top: 15px;
+  animation: pulse 1s infinite;
+}
+@keyframes pulse {
+  0% { opacity: 1; }
+  50% { opacity: 0.4; }
+  100% { opacity: 1; }
+}
+
+/* Avatar */
+#avatar {
+  position: fixed;
+  top: 15px;
+  left: 15px;
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  border: 3px solid #ff0000;
+  box-shadow: 0 0 15px red;
+  z-index: 9999;
+  cursor: pointer;
+  transition: transform 0.3s;
+}
+#avatar:hover {
+  transform: scale(1.1);
+}
+</style>
+
+<style>
+#cursor-light {
+  position: fixed;
+  width: 100px;
+  height: 100px;
+  margin-left: -50px;
+  margin-top: -50px;
+  pointer-events: none;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(255,255,255,0.3) 0%, transparent 60%);
+  z-index: 9999;
+  mix-blend-mode: overlay;
+}
+#audio-toggle {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: rgba(255, 0, 0, 0.85);
+  color: white;
+  border: none;
+  padding: 10px 18px;
+  border-radius: 50px;
+  cursor: pointer;
+  z-index: 9999;
+  box-shadow: 0 0 15px red;
+  transition: transform 0.2s ease;
+}
+#audio-toggle:hover {
+  transform: scale(1.1);
+}
+</style>
+
+
+<style>
+#loading-screen {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background-color: #000;
+  z-index: 99999;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 18px;
+  font-family: 'Segoe UI', sans-serif;
+}
+.loader {
+  border: 6px solid #f3f3f3;
+  border-top: 6px solid #ff0000;
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  animation: spin 1.5s linear infinite;
+}
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+.loading-text {
+  margin-top: 15px;
+  animation: pulse 1s infinite;
+}
+@keyframes pulse {
+  0% { opacity: 1; }
+  50% { opacity: 0.4; }
+  100% { opacity: 1; }
+}
+
+/* Avatar */
+#avatar {
+  position: fixed;
+  top: 15px;
+  left: 15px;
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  border: 3px solid #ff0000;
+  box-shadow: 0 0 15px red;
+  z-index: 9999;
+  cursor: pointer;
+  transition: transform 0.3s;
+}
+#avatar:hover {
+  transform: scale(1.1);
+}
+</style>
+
+<style>
+#login-screen input.correct {
+  border: 2px solid lime;
+  animation: pulseGreen 0.5s ease;
+}
+#login-screen input.incorrect {
+  border: 2px solid red;
+  animation: shake 0.3s ease;
+}
+@keyframes shake {
+  0% { transform: translateX(0); }
+  25% { transform: translateX(-5px); }
+  50% { transform: translateX(5px); }
+  75% { transform: translateX(-5px); }
+  100% { transform: translateX(0); }
+}
+@keyframes pulseGreen {
+  0% { box-shadow: 0 0 0px lime; }
+  100% { box-shadow: 0 0 10px lime; }
+}
+</style>
+
+
+
+
+<style>
+#loading-screen {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background-color: #000;
+  z-index: 99999;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 18px;
+  font-family: 'Segoe UI', sans-serif;
+}
+.loader {
+  border: 6px solid #f3f3f3;
+  border-top: 6px solid #ff0000;
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  animation: spin 1.5s linear infinite;
+}
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+.loading-text {
+  margin-top: 15px;
+  animation: pulse 1s infinite;
+}
+@keyframes pulse {
+  0% { opacity: 1; }
+  50% { opacity: 0.4; }
+  100% { opacity: 1; }
+}
+
+/* Avatar */
+#avatar {
+  position: fixed;
+  top: 15px;
+  left: 15px;
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  border: 3px solid #ff0000;
+  box-shadow: 0 0 15px red;
+  z-index: 9999;
+  cursor: pointer;
+  transition: transform 0.3s;
+}
+#avatar:hover {
+  transform: scale(1.1);
+}
+</style>
+
+<style>
+#cursor-light {
+  position: fixed;
+  width: 100px;
+  height: 100px;
+  margin-left: -50px;
+  margin-top: -50px;
+  pointer-events: none;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(255,255,255,0.3) 0%, transparent 60%);
+  z-index: 9999;
+  mix-blend-mode: overlay;
+}
+#audio-toggle {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: rgba(255, 0, 0, 0.85);
+  color: white;
+  border: none;
+  padding: 10px 18px;
+  border-radius: 50px;
+  cursor: pointer;
+  z-index: 9999;
+  box-shadow: 0 0 15px red;
+  transition: transform 0.2s ease;
+}
+#audio-toggle:hover {
+  transform: scale(1.1);
+}
+</style>
+
+
+<style>
+#loading-screen {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background-color: #000;
+  z-index: 99999;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 18px;
+  font-family: 'Segoe UI', sans-serif;
+}
+.loader {
+  border: 6px solid #f3f3f3;
+  border-top: 6px solid #ff0000;
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  animation: spin 1.5s linear infinite;
+}
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+.loading-text {
+  margin-top: 15px;
+  animation: pulse 1s infinite;
+}
+@keyframes pulse {
+  0% { opacity: 1; }
+  50% { opacity: 0.4; }
+  100% { opacity: 1; }
+}
+
+/* Avatar */
+#avatar {
+  position: fixed;
+  top: 15px;
+  left: 15px;
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  border: 3px solid #ff0000;
+  box-shadow: 0 0 15px red;
+  z-index: 9999;
+  cursor: pointer;
+  transition: transform 0.3s;
+}
+#avatar:hover {
+  transform: scale(1.1);
+}
+</style>
+
+<style>
+.fade-in {
+  animation: fadeIn 1.5s ease-in-out forwards;
+  opacity: 0;
+}
+@keyframes fadeIn {
+  to { opacity: 1; }
+}
+#welcome-message {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 28px;
+  font-weight: bold;
+  color: white;
+  z-index: 99999;
+  background: rgba(0, 0, 0, 0.6);
+  padding: 20px 30px;
+  border-radius: 12px;
+  box-shadow: 0 0 15px rgba(255,255,255,0.3);
+  display: none;
+  animation: fadeIn 1.2s ease forwards;
+}
+</style>
+
+
+
+<style>
+#loading-screen {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background-color: #000;
+  z-index: 99999;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 18px;
+  font-family: 'Segoe UI', sans-serif;
+}
+.loader {
+  border: 6px solid #f3f3f3;
+  border-top: 6px solid #ff0000;
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  animation: spin 1.5s linear infinite;
+}
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+.loading-text {
+  margin-top: 15px;
+  animation: pulse 1s infinite;
+}
+@keyframes pulse {
+  0% { opacity: 1; }
+  50% { opacity: 0.4; }
+  100% { opacity: 1; }
+}
+
+/* Avatar */
+#avatar {
+  position: fixed;
+  top: 15px;
+  left: 15px;
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  border: 3px solid #ff0000;
+  box-shadow: 0 0 15px red;
+  z-index: 9999;
+  cursor: pointer;
+  transition: transform 0.3s;
+}
+#avatar:hover {
+  transform: scale(1.1);
+}
+</style>
+
+<style>
+#cursor-light {
+  position: fixed;
+  width: 100px;
+  height: 100px;
+  margin-left: -50px;
+  margin-top: -50px;
+  pointer-events: none;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(255,255,255,0.3) 0%, transparent 60%);
+  z-index: 9999;
+  mix-blend-mode: overlay;
+}
+#audio-toggle {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: rgba(255, 0, 0, 0.85);
+  color: white;
+  border: none;
+  padding: 10px 18px;
+  border-radius: 50px;
+  cursor: pointer;
+  z-index: 9999;
+  box-shadow: 0 0 15px red;
+  transition: transform 0.2s ease;
+}
+#audio-toggle:hover {
+  transform: scale(1.1);
+}
+</style>
+
+
+<style>
+#loading-screen {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background-color: #000;
+  z-index: 99999;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 18px;
+  font-family: 'Segoe UI', sans-serif;
+}
+.loader {
+  border: 6px solid #f3f3f3;
+  border-top: 6px solid #ff0000;
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  animation: spin 1.5s linear infinite;
+}
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+.loading-text {
+  margin-top: 15px;
+  animation: pulse 1s infinite;
+}
+@keyframes pulse {
+  0% { opacity: 1; }
+  50% { opacity: 0.4; }
+  100% { opacity: 1; }
+}
+
+/* Avatar */
+#avatar {
+  position: fixed;
+  top: 15px;
+  left: 15px;
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  border: 3px solid #ff0000;
+  box-shadow: 0 0 15px red;
+  z-index: 9999;
+  cursor: pointer;
+  transition: transform 0.3s;
+}
+#avatar:hover {
+  transform: scale(1.1);
+}
+</style>
+
+<style>
+#music-toggle {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  background: black;
+  color: white;
+  border: 2px solid red;
+  border-radius: 8px;
+  padding: 8px 16px;
+  font-weight: bold;
+  cursor: pointer;
+  z-index: 9999;
+  box-shadow: 0 0 10px red, 0 0 20px red;
+  transition: 0.3s ease;
+}
+#music-toggle:hover {
+  background-color: red;
+  color: white;
+}
+</style>
+
+<audio id="bg-music" loop autoplay style="display:none">
+  <source src="music.mp3" type="audio/mp3">
+</audio>
+<button id="music-toggle">🔊 Tắt nhạc</button>
+<script>
+const music = document.getElementById("bg-music");
+const toggleBtn = document.getElementById("music-toggle");
+toggleBtn.onclick = function() {
+  if (music.paused) {
+    music.play();
+    toggleBtn.innerHTML = "🔊 Tắt nhạc";
+  } else {
+    music.pause();
+    toggleBtn.innerHTML = "🔈 Bật nhạc";
+  }
+};
+</script>
+
+
+<script>
+window.addEventListener("load", function() {
+  const hour = new Date().getHours();
+  let message = "";
+  if (hour >= 5 && hour < 11) {
+    message = "🌞 Chào buổi sáng! Chúc bạn một ngày tuyệt vời!";
+  } else if (hour >= 11 && hour < 18) {
+    message = "🌤️ Chúc bạn buổi chiều vui vẻ và năng động!";
+  } else if (hour >= 18 && hour < 22) {
+    message = "🌙 Chúc bạn một buổi tối thư giãn!";
+  } else {
+    message = "🌌 Đã tối rồi! Chúc bạn ngủ ngon và mơ đẹp!";
+  }
+
+  const div = document.createElement("div");
+  div.textContent = message;
+  div.style.position = "fixed";
+  div.style.top = "80px";
+  div.style.left = "50%";
+  div.style.transform = "translateX(-50%)";
+  div.style.background = "rgba(0, 0, 0, 0.7)";
+  div.style.color = "white";
+  div.style.padding = "12px 24px";
+  div.style.borderRadius = "10px";
+  div.style.fontSize = "16px";
+  div.style.zIndex = "10000";
+  div.style.boxShadow = "0 0 10px rgba(255, 255, 255, 0.6)";
+  document.body.appendChild(div);
+
+  setTimeout(() => {
+    div.remove();
+  }, 6000);
+});
+</script>
+
+
+<script>
+window.addEventListener("beforeunload", function (e) {
+  const message = "👋 Tạm Biệt Và Hẹn Gặp Lại... Yamate 😆";
+  e.preventDefault();
+  e.returnValue = message;
+  return message;
+});
+</script>
+
+</div>
+
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+  const links = document.querySelectorAll("a");
+  links.forEach(link => {
+    link.addEventListener("click", function(e) {
+      const now = new Date();
+      const timeStr = now.toLocaleTimeString();
+      const dateStr = now.toLocaleDateString();
+      alert("🕒 Bạn đã nhấn vào liên kết vào lúc: " + timeStr + " - Ngày: " + dateStr);
+    });
+  });
+});
+</script>
+
+
+
+
+
+
+<style>
+#loading-screen {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background-color: #000;
+  z-index: 99999;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 18px;
+  font-family: 'Segoe UI', sans-serif;
+}
+.loader {
+  border: 6px solid #f3f3f3;
+  border-top: 6px solid #ff0000;
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  animation: spin 1.5s linear infinite;
+}
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+.loading-text {
+  margin-top: 15px;
+  animation: pulse 1s infinite;
+}
+@keyframes pulse {
+  0% { opacity: 1; }
+  50% { opacity: 0.4; }
+  100% { opacity: 1; }
+}
+
+/* Avatar */
+#avatar {
+  position: fixed;
+  top: 15px;
+  left: 15px;
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  border: 3px solid #ff0000;
+  box-shadow: 0 0 15px red;
+  z-index: 9999;
+  cursor: pointer;
+  transition: transform 0.3s;
+}
+#avatar:hover {
+  transform: scale(1.1);
+}
+</style>
+
+<style>
+#cursor-light {
+  position: fixed;
+  width: 100px;
+  height: 100px;
+  margin-left: -50px;
+  margin-top: -50px;
+  pointer-events: none;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(255,255,255,0.3) 0%, transparent 60%);
+  z-index: 9999;
+  mix-blend-mode: overlay;
+}
+#audio-toggle {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: rgba(255, 0, 0, 0.85);
+  color: white;
+  border: none;
+  padding: 10px 18px;
+  border-radius: 50px;
+  cursor: pointer;
+  z-index: 9999;
+  box-shadow: 0 0 15px red;
+  transition: transform 0.2s ease;
+}
+#audio-toggle:hover {
+  transform: scale(1.1);
+}
+</style>
+
+
+<style>
+#loading-screen {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background-color: #000;
+  z-index: 99999;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 18px;
+  font-family: 'Segoe UI', sans-serif;
+}
+.loader {
+  border: 6px solid #f3f3f3;
+  border-top: 6px solid #ff0000;
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  animation: spin 1.5s linear infinite;
+}
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+.loading-text {
+  margin-top: 15px;
+  animation: pulse 1s infinite;
+}
+@keyframes pulse {
+  0% { opacity: 1; }
+  50% { opacity: 0.4; }
+  100% { opacity: 1; }
+}
+
+/* Avatar */
+#avatar {
+  position: fixed;
+  top: 15px;
+  left: 15px;
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  border: 3px solid #ff0000;
+  box-shadow: 0 0 15px red;
+  z-index: 9999;
+  cursor: pointer;
+  transition: transform 0.3s;
+}
+#avatar:hover {
+  transform: scale(1.1);
+}
+</style>
+
+<style>
+.fade-in {
+  animation: fadeIn 1.5s ease-in-out forwards;
+  opacity: 0;
+}
+@keyframes fadeIn {
+  to { opacity: 1; }
+}
+#welcome-message {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 28px;
+  font-weight: bold;
+  color: white;
+  z-index: 99999;
+  background: rgba(0, 0, 0, 0.6);
+  padding: 20px 30px;
+  border-radius: 12px;
+  box-shadow: 0 0 15px rgba(255,255,255,0.3);
+  display: none;
+  animation: fadeIn 1.2s ease forwards;
+}
+</style>
+
+
+
+<style>
+#loading-screen {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background-color: #000;
+  z-index: 99999;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 18px;
+  font-family: 'Segoe UI', sans-serif;
+}
+.loader {
+  border: 6px solid #f3f3f3;
+  border-top: 6px solid #ff0000;
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  animation: spin 1.5s linear infinite;
+}
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+.loading-text {
+  margin-top: 15px;
+  animation: pulse 1s infinite;
+}
+@keyframes pulse {
+  0% { opacity: 1; }
+  50% { opacity: 0.4; }
+  100% { opacity: 1; }
+}
+
+/* Avatar */
+#avatar {
+  position: fixed;
+  top: 15px;
+  left: 15px;
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  border: 3px solid #ff0000;
+  box-shadow: 0 0 15px red;
+  z-index: 9999;
+  cursor: pointer;
+  transition: transform 0.3s;
+}
+#avatar:hover {
+  transform: scale(1.1);
+}
+</style>
+
+<style>
+#cursor-light {
+  position: fixed;
+  width: 100px;
+  height: 100px;
+  margin-left: -50px;
+  margin-top: -50px;
+  pointer-events: none;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(255,255,255,0.3) 0%, transparent 60%);
+  z-index: 9999;
+  mix-blend-mode: overlay;
+}
+#audio-toggle {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: rgba(255, 0, 0, 0.85);
+  color: white;
+  border: none;
+  padding: 10px 18px;
+  border-radius: 50px;
+  cursor: pointer;
+  z-index: 9999;
+  box-shadow: 0 0 15px red;
+  transition: transform 0.2s ease;
+}
+#audio-toggle:hover {
+  transform: scale(1.1);
+}
+</style>
+
+
+<style>
+#loading-screen {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background-color: #000;
+  z-index: 99999;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 18px;
+  font-family: 'Segoe UI', sans-serif;
+}
+.loader {
+  border: 6px solid #f3f3f3;
+  border-top: 6px solid #ff0000;
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  animation: spin 1.5s linear infinite;
+}
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+.loading-text {
+  margin-top: 15px;
+  animation: pulse 1s infinite;
+}
+@keyframes pulse {
+  0% { opacity: 1; }
+  50% { opacity: 0.4; }
+  100% { opacity: 1; }
+}
+
+/* Avatar */
+#avatar {
+  position: fixed;
+  top: 15px;
+  left: 15px;
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  border: 3px solid #ff0000;
+  box-shadow: 0 0 15px red;
+  z-index: 9999;
+  cursor: pointer;
+  transition: transform 0.3s;
+}
+#avatar:hover {
+  transform: scale(1.1);
+}
+</style>
+
+<style>
+#login-screen input.correct {
+  border: 2px solid lime;
+  animation: pulseGreen 0.5s ease;
+}
+#login-screen input.incorrect {
+  border: 2px solid red;
+  animation: shake 0.3s ease;
+}
+@keyframes shake {
+  0% { transform: translateX(0); }
+  25% { transform: translateX(-5px); }
+  50% { transform: translateX(5px); }
+  75% { transform: translateX(-5px); }
+  100% { transform: translateX(0); }
+}
+@keyframes pulseGreen {
+  0% { box-shadow: 0 0 0px lime; }
+  100% { box-shadow: 0 0 10px lime; }
+}
+</style>
+
+
+
+
+<style>
+#loading-screen {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background-color: #000;
+  z-index: 99999;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 18px;
+  font-family: 'Segoe UI', sans-serif;
+}
+.loader {
+  border: 6px solid #f3f3f3;
+  border-top: 6px solid #ff0000;
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  animation: spin 1.5s linear infinite;
+}
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+.loading-text {
+  margin-top: 15px;
+  animation: pulse 1s infinite;
+}
+@keyframes pulse {
+  0% { opacity: 1; }
+  50% { opacity: 0.4; }
+  100% { opacity: 1; }
+}
+
+/* Avatar */
+#avatar {
+  position: fixed;
+  top: 15px;
+  left: 15px;
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  border: 3px solid #ff0000;
+  box-shadow: 0 0 15px red;
+  z-index: 9999;
+  cursor: pointer;
+  transition: transform 0.3s;
+}
+#avatar:hover {
+  transform: scale(1.1);
+}
+</style>
+
+<style>
+#cursor-light {
+  position: fixed;
+  width: 100px;
+  height: 100px;
+  margin-left: -50px;
+  margin-top: -50px;
+  pointer-events: none;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(255,255,255,0.3) 0%, transparent 60%);
+  z-index: 9999;
+  mix-blend-mode: overlay;
+}
+#audio-toggle {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: rgba(255, 0, 0, 0.85);
+  color: white;
+  border: none;
+  padding: 10px 18px;
+  border-radius: 50px;
+  cursor: pointer;
+  z-index: 9999;
+  box-shadow: 0 0 15px red;
+  transition: transform 0.2s ease;
+}
+#audio-toggle:hover {
+  transform: scale(1.1);
+}
+</style>
+
+
+<style>
+#loading-screen {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background-color: #000;
+  z-index: 99999;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 18px;
+  font-family: 'Segoe UI', sans-serif;
+}
+.loader {
+  border: 6px solid #f3f3f3;
+  border-top: 6px solid #ff0000;
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  animation: spin 1.5s linear infinite;
+}
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+.loading-text {
+  margin-top: 15px;
+  animation: pulse 1s infinite;
+}
+@keyframes pulse {
+  0% { opacity: 1; }
+  50% { opacity: 0.4; }
+  100% { opacity: 1; }
+}
+
+/* Avatar */
+#avatar {
+  position: fixed;
+  top: 15px;
+  left: 15px;
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  border: 3px solid #ff0000;
+  box-shadow: 0 0 15px red;
+  z-index: 9999;
+  cursor: pointer;
+  transition: transform 0.3s;
+}
+#avatar:hover {
+  transform: scale(1.1);
+}
+</style>
+
+<style>
+.fade-in {
+  animation: fadeIn 1.5s ease-in-out forwards;
+  opacity: 0;
+}
+@keyframes fadeIn {
+  to { opacity: 1; }
+}
+#welcome-message {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 28px;
+  font-weight: bold;
+  color: white;
+  z-index: 99999;
+  background: rgba(0, 0, 0, 0.6);
+  padding: 20px 30px;
+  border-radius: 12px;
+  box-shadow: 0 0 15px rgba(255,255,255,0.3);
+  display: none;
+  animation: fadeIn 1.2s ease forwards;
+}
+</style>
+
+
+
+<style>
+#loading-screen {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background-color: #000;
+  z-index: 99999;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 18px;
+  font-family: 'Segoe UI', sans-serif;
+}
+.loader {
+  border: 6px solid #f3f3f3;
+  border-top: 6px solid #ff0000;
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  animation: spin 1.5s linear infinite;
+}
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+.loading-text {
+  margin-top: 15px;
+  animation: pulse 1s infinite;
+}
+@keyframes pulse {
+  0% { opacity: 1; }
+  50% { opacity: 0.4; }
+  100% { opacity: 1; }
+}
+
+/* Avatar */
+#avatar {
+  position: fixed;
+  top: 15px;
+  left: 15px;
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  border: 3px solid #ff0000;
+  box-shadow: 0 0 15px red;
+  z-index: 9999;
+  cursor: pointer;
+  transition: transform 0.3s;
+}
+#avatar:hover {
+  transform: scale(1.1);
+}
+</style>
+
+<style>
+#cursor-light {
+  position: fixed;
+  width: 100px;
+  height: 100px;
+  margin-left: -50px;
+  margin-top: -50px;
+  pointer-events: none;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(255,255,255,0.3) 0%, transparent 60%);
+  z-index: 9999;
+  mix-blend-mode: overlay;
+}
+#audio-toggle {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: rgba(255, 0, 0, 0.85);
+  color: white;
+  border: none;
+  padding: 10px 18px;
+  border-radius: 50px;
+  cursor: pointer;
+  z-index: 9999;
+  box-shadow: 0 0 15px red;
+  transition: transform 0.2s ease;
+}
+#audio-toggle:hover {
+  transform: scale(1.1);
+}
+</style>
+
+
+<style>
+#loading-screen {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background-color: #000;
+  z-index: 99999;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 18px;
+  font-family: 'Segoe UI', sans-serif;
+}
+.loader {
+  border: 6px solid #f3f3f3;
+  border-top: 6px solid #ff0000;
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  animation: spin 1.5s linear infinite;
+}
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+.loading-text {
+  margin-top: 15px;
+  animation: pulse 1s infinite;
+}
+@keyframes pulse {
+  0% { opacity: 1; }
+  50% { opacity: 0.4; }
+  100% { opacity: 1; }
+}
+
+/* Avatar */
+#avatar {
+  position: fixed;
+  top: 15px;
+  left: 15px;
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  border: 3px solid #ff0000;
+  box-shadow: 0 0 15px red;
+  z-index: 9999;
+  cursor: pointer;
+  transition: transform 0.3s;
+}
+#avatar:hover {
+  transform: scale(1.1);
+}
+</style>
+
+<style>
+#time-popup {
+  position: fixed;
+  bottom: -100px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: rgba(0,0,0,0.85);
+  color: #fff;
+  padding: 14px 24px;
+  border-radius: 10px;
+  font-family: 'Arial', sans-serif;
+  font-size: 16px;
+  z-index: 9999;
+  opacity: 0;
+  transition: all 0.6s ease;
+}
+#time-popup.show {
+  bottom: 30px;
+  opacity: 1;
+}
+</style>
+<div id="time-popup">🕒 Thời gian...</div>
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+  const popup = document.getElementById("time-popup");
+  const links = document.querySelectorAll("a");
+
+  links.forEach(link => {
+    link.addEventListener("click", function(e) {
+      const now = new Date();
+      const timeStr = now.toLocaleTimeString();
+      const dateStr = now.toLocaleDateString();
+      popup.innerText = "🕒 " + timeStr + " - " + dateStr;
+      popup.classList.add("show");
+      setTimeout(() => {
+        popup.classList.remove("show");
+      }, 3000);
+    });
+  });
+});
+</script>
+
+
+
+
+
+
+<style>
+#loading-screen {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background-color: #000;
+  z-index: 99999;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 18px;
+  font-family: 'Segoe UI', sans-serif;
+}
+.loader {
+  border: 6px solid #f3f3f3;
+  border-top: 6px solid #ff0000;
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  animation: spin 1.5s linear infinite;
+}
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+.loading-text {
+  margin-top: 15px;
+  animation: pulse 1s infinite;
+}
+@keyframes pulse {
+  0% { opacity: 1; }
+  50% { opacity: 0.4; }
+  100% { opacity: 1; }
+}
+
+/* Avatar */
+#avatar {
+  position: fixed;
+  top: 15px;
+  left: 15px;
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  border: 3px solid #ff0000;
+  box-shadow: 0 0 15px red;
+  z-index: 9999;
+  cursor: pointer;
+  transition: transform 0.3s;
+}
+#avatar:hover {
+  transform: scale(1.1);
+}
+</style>
+
+<style>
+#cursor-light {
+  position: fixed;
+  width: 100px;
+  height: 100px;
+  margin-left: -50px;
+  margin-top: -50px;
+  pointer-events: none;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(255,255,255,0.3) 0%, transparent 60%);
+  z-index: 9999;
+  mix-blend-mode: overlay;
+}
+#audio-toggle {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: rgba(255, 0, 0, 0.85);
+  color: white;
+  border: none;
+  padding: 10px 18px;
+  border-radius: 50px;
+  cursor: pointer;
+  z-index: 9999;
+  box-shadow: 0 0 15px red;
+  transition: transform 0.2s ease;
+}
+#audio-toggle:hover {
+  transform: scale(1.1);
+}
+</style>
+
+
+<style>
+#loading-screen {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background-color: #000;
+  z-index: 99999;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 18px;
+  font-family: 'Segoe UI', sans-serif;
+}
+.loader {
+  border: 6px solid #f3f3f3;
+  border-top: 6px solid #ff0000;
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  animation: spin 1.5s linear infinite;
+}
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+.loading-text {
+  margin-top: 15px;
+  animation: pulse 1s infinite;
+}
+@keyframes pulse {
+  0% { opacity: 1; }
+  50% { opacity: 0.4; }
+  100% { opacity: 1; }
+}
+
+/* Avatar */
+#avatar {
+  position: fixed;
+  top: 15px;
+  left: 15px;
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  border: 3px solid #ff0000;
+  box-shadow: 0 0 15px red;
+  z-index: 9999;
+  cursor: pointer;
+  transition: transform 0.3s;
+}
+#avatar:hover {
+  transform: scale(1.1);
+}
+</style>
+
+<style>
+.fade-in {
+  animation: fadeIn 1.5s ease-in-out forwards;
+  opacity: 0;
+}
+@keyframes fadeIn {
+  to { opacity: 1; }
+}
+#welcome-message {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 28px;
+  font-weight: bold;
+  color: white;
+  z-index: 99999;
+  background: rgba(0, 0, 0, 0.6);
+  padding: 20px 30px;
+  border-radius: 12px;
+  box-shadow: 0 0 15px rgba(255,255,255,0.3);
+  display: none;
+  animation: fadeIn 1.2s ease forwards;
+}
+</style>
+
+
+
+<style>
+#loading-screen {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background-color: #000;
+  z-index: 99999;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 18px;
+  font-family: 'Segoe UI', sans-serif;
+}
+.loader {
+  border: 6px solid #f3f3f3;
+  border-top: 6px solid #ff0000;
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  animation: spin 1.5s linear infinite;
+}
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+.loading-text {
+  margin-top: 15px;
+  animation: pulse 1s infinite;
+}
+@keyframes pulse {
+  0% { opacity: 1; }
+  50% { opacity: 0.4; }
+  100% { opacity: 1; }
+}
+
+/* Avatar */
+#avatar {
+  position: fixed;
+  top: 15px;
+  left: 15px;
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  border: 3px solid #ff0000;
+  box-shadow: 0 0 15px red;
+  z-index: 9999;
+  cursor: pointer;
+  transition: transform 0.3s;
+}
+#avatar:hover {
+  transform: scale(1.1);
+}
+</style>
+
+<style>
+#cursor-light {
+  position: fixed;
+  width: 100px;
+  height: 100px;
+  margin-left: -50px;
+  margin-top: -50px;
+  pointer-events: none;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(255,255,255,0.3) 0%, transparent 60%);
+  z-index: 9999;
+  mix-blend-mode: overlay;
+}
+#audio-toggle {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: rgba(255, 0, 0, 0.85);
+  color: white;
+  border: none;
+  padding: 10px 18px;
+  border-radius: 50px;
+  cursor: pointer;
+  z-index: 9999;
+  box-shadow: 0 0 15px red;
+  transition: transform 0.2s ease;
+}
+#audio-toggle:hover {
+  transform: scale(1.1);
+}
+</style>
+
+
+<style>
+#loading-screen {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background-color: #000;
+  z-index: 99999;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 18px;
+  font-family: 'Segoe UI', sans-serif;
+}
+.loader {
+  border: 6px solid #f3f3f3;
+  border-top: 6px solid #ff0000;
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  animation: spin 1.5s linear infinite;
+}
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+.loading-text {
+  margin-top: 15px;
+  animation: pulse 1s infinite;
+}
+@keyframes pulse {
+  0% { opacity: 1; }
+  50% { opacity: 0.4; }
+  100% { opacity: 1; }
+}
+
+/* Avatar */
+#avatar {
+  position: fixed;
+  top: 15px;
+  left: 15px;
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  border: 3px solid #ff0000;
+  box-shadow: 0 0 15px red;
+  z-index: 9999;
+  cursor: pointer;
+  transition: transform 0.3s;
+}
+#avatar:hover {
+  transform: scale(1.1);
+}
+</style>
+
+<style>
+#login-screen input.correct {
+  border: 2px solid lime;
+  animation: pulseGreen 0.5s ease;
+}
+#login-screen input.incorrect {
+  border: 2px solid red;
+  animation: shake 0.3s ease;
+}
+@keyframes shake {
+  0% { transform: translateX(0); }
+  25% { transform: translateX(-5px); }
+  50% { transform: translateX(5px); }
+  75% { transform: translateX(-5px); }
+  100% { transform: translateX(0); }
+}
+@keyframes pulseGreen {
+  0% { box-shadow: 0 0 0px lime; }
+  100% { box-shadow: 0 0 10px lime; }
+}
+</style>
+
+
+
+
+<style>
+#loading-screen {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background-color: #000;
+  z-index: 99999;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 18px;
+  font-family: 'Segoe UI', sans-serif;
+}
+.loader {
+  border: 6px solid #f3f3f3;
+  border-top: 6px solid #ff0000;
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  animation: spin 1.5s linear infinite;
+}
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+.loading-text {
+  margin-top: 15px;
+  animation: pulse 1s infinite;
+}
+@keyframes pulse {
+  0% { opacity: 1; }
+  50% { opacity: 0.4; }
+  100% { opacity: 1; }
+}
+
+/* Avatar */
+#avatar {
+  position: fixed;
+  top: 15px;
+  left: 15px;
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  border: 3px solid #ff0000;
+  box-shadow: 0 0 15px red;
+  z-index: 9999;
+  cursor: pointer;
+  transition: transform 0.3s;
+}
+#avatar:hover {
+  transform: scale(1.1);
+}
+</style>
+
+<style>
+#cursor-light {
+  position: fixed;
+  width: 100px;
+  height: 100px;
+  margin-left: -50px;
+  margin-top: -50px;
+  pointer-events: none;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(255,255,255,0.3) 0%, transparent 60%);
+  z-index: 9999;
+  mix-blend-mode: overlay;
+}
+#audio-toggle {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: rgba(255, 0, 0, 0.85);
+  color: white;
+  border: none;
+  padding: 10px 18px;
+  border-radius: 50px;
+  cursor: pointer;
+  z-index: 9999;
+  box-shadow: 0 0 15px red;
+  transition: transform 0.2s ease;
+}
+#audio-toggle:hover {
+  transform: scale(1.1);
+}
+</style>
+
+
+<style>
+#loading-screen {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background-color: #000;
+  z-index: 99999;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 18px;
+  font-family: 'Segoe UI', sans-serif;
+}
+.loader {
+  border: 6px solid #f3f3f3;
+  border-top: 6px solid #ff0000;
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  animation: spin 1.5s linear infinite;
+}
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+.loading-text {
+  margin-top: 15px;
+  animation: pulse 1s infinite;
+}
+@keyframes pulse {
+  0% { opacity: 1; }
+  50% { opacity: 0.4; }
+  100% { opacity: 1; }
+}
+
+/* Avatar */
+#avatar {
+  position: fixed;
+  top: 15px;
+  left: 15px;
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  border: 3px solid #ff0000;
+  box-shadow: 0 0 15px red;
+  z-index: 9999;
+  cursor: pointer;
+  transition: transform 0.3s;
+}
+#avatar:hover {
+  transform: scale(1.1);
+}
+</style>
+
+<style>
+.fade-in {
+  animation: fadeIn 1.5s ease-in-out forwards;
+  opacity: 0;
+}
+@keyframes fadeIn {
+  to { opacity: 1; }
+}
+#welcome-message {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 28px;
+  font-weight: bold;
+  color: white;
+  z-index: 99999;
+  background: rgba(0, 0, 0, 0.6);
+  padding: 20px 30px;
+  border-radius: 12px;
+  box-shadow: 0 0 15px rgba(255,255,255,0.3);
+  display: none;
+  animation: fadeIn 1.2s ease forwards;
+}
+</style>
+
+
+
+<style>
+#loading-screen {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background-color: #000;
+  z-index: 99999;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 18px;
+  font-family: 'Segoe UI', sans-serif;
+}
+.loader {
+  border: 6px solid #f3f3f3;
+  border-top: 6px solid #ff0000;
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  animation: spin 1.5s linear infinite;
+}
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+.loading-text {
+  margin-top: 15px;
+  animation: pulse 1s infinite;
+}
+@keyframes pulse {
+  0% { opacity: 1; }
+  50% { opacity: 0.4; }
+  100% { opacity: 1; }
+}
+
+/* Avatar */
+#avatar {
+  position: fixed;
+  top: 15px;
+  left: 15px;
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  border: 3px solid #ff0000;
+  box-shadow: 0 0 15px red;
+  z-index: 9999;
+  cursor: pointer;
+  transition: transform 0.3s;
+}
+#avatar:hover {
+  transform: scale(1.1);
+}
+</style>
+
+<style>
+#cursor-light {
+  position: fixed;
+  width: 100px;
+  height: 100px;
+  margin-left: -50px;
+  margin-top: -50px;
+  pointer-events: none;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(255,255,255,0.3) 0%, transparent 60%);
+  z-index: 9999;
+  mix-blend-mode: overlay;
+}
+#audio-toggle {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: rgba(255, 0, 0, 0.85);
+  color: white;
+  border: none;
+  padding: 10px 18px;
+  border-radius: 50px;
+  cursor: pointer;
+  z-index: 9999;
+  box-shadow: 0 0 15px red;
+  transition: transform 0.2s ease;
+}
+#audio-toggle:hover {
+  transform: scale(1.1);
+}
+</style>
+
+
+<style>
+#loading-screen {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background-color: #000;
+  z-index: 99999;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 18px;
+  font-family: 'Segoe UI', sans-serif;
+}
+.loader {
+  border: 6px solid #f3f3f3;
+  border-top: 6px solid #ff0000;
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  animation: spin 1.5s linear infinite;
+}
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+.loading-text {
+  margin-top: 15px;
+  animation: pulse 1s infinite;
+}
+@keyframes pulse {
+  0% { opacity: 1; }
+  50% { opacity: 0.4; }
+  100% { opacity: 1; }
+}
+
+/* Avatar */
+#avatar {
+  position: fixed;
+  top: 15px;
+  left: 15px;
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  border: 3px solid #ff0000;
+  box-shadow: 0 0 15px red;
+  z-index: 9999;
+  cursor: pointer;
+  transition: transform 0.3s;
+}
+#avatar:hover {
+  transform: scale(1.1);
+}
+</style>
+
+<style>
+#login-screen {
+  position: fixed;
+  top: 0; left: 0;
+  width: 100vw; height: 100vh;
+  background: rgba(0,0,0,0.9);
+  z-index: 999999;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-family: 'Arial', sans-serif;
+}
+#login-screen input {
+  padding: 12px 20px;
+  border-radius: 6px;
+  border: none;
+  font-size: 16px;
+  margin-top: 10px;
+}
+#login-screen button {
+  padding: 10px 18px;
+  margin-top: 12px;
+  border: none;
+  border-radius: 5px;
+  background: crimson;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+}
+</style>
+
+<div id="login-screen">
+  <h2>🔐 Nhập mã truy cập để vào website</h2>
+  <input type="password" id="access-key" placeholder="Nhập mã khóa...">
+  <button onclick="checkLoginKey()">Truy cập</button>
+<p id="locked-msg" class="locked-msg" style="display:none;">🚫 Bạn đã nhập sai quá 3 lần. Truy cập bị khóa!</p>
+</div>
+
+<script>
+function checkLoginKey() {
+  const key = document.getElementById("access-key").value;
+  if (key === "quangbao07") {
+    document.getElementById("login-screen").style.display = "none";
+  } else {
+    alert("❌ Mã truy cập sai! Vui lòng thử lại.");
+  }
+}
+</script>
+
+
+
+
+
+
+<style>
+#loading-screen {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background-color: #000;
+  z-index: 99999;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 18px;
+  font-family: 'Segoe UI', sans-serif;
+}
+.loader {
+  border: 6px solid #f3f3f3;
+  border-top: 6px solid #ff0000;
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  animation: spin 1.5s linear infinite;
+}
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+.loading-text {
+  margin-top: 15px;
+  animation: pulse 1s infinite;
+}
+@keyframes pulse {
+  0% { opacity: 1; }
+  50% { opacity: 0.4; }
+  100% { opacity: 1; }
+}
+
+/* Avatar */
+#avatar {
+  position: fixed;
+  top: 15px;
+  left: 15px;
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  border: 3px solid #ff0000;
+  box-shadow: 0 0 15px red;
+  z-index: 9999;
+  cursor: pointer;
+  transition: transform 0.3s;
+}
+#avatar:hover {
+  transform: scale(1.1);
+}
+</style>
+
+<style>
+#cursor-light {
+  position: fixed;
+  width: 100px;
+  height: 100px;
+  margin-left: -50px;
+  margin-top: -50px;
+  pointer-events: none;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(255,255,255,0.3) 0%, transparent 60%);
+  z-index: 9999;
+  mix-blend-mode: overlay;
+}
+#audio-toggle {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: rgba(255, 0, 0, 0.85);
+  color: white;
+  border: none;
+  padding: 10px 18px;
+  border-radius: 50px;
+  cursor: pointer;
+  z-index: 9999;
+  box-shadow: 0 0 15px red;
+  transition: transform 0.2s ease;
+}
+#audio-toggle:hover {
+  transform: scale(1.1);
+}
+</style>
+
+
+<style>
+#loading-screen {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background-color: #000;
+  z-index: 99999;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 18px;
+  font-family: 'Segoe UI', sans-serif;
+}
+.loader {
+  border: 6px solid #f3f3f3;
+  border-top: 6px solid #ff0000;
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  animation: spin 1.5s linear infinite;
+}
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+.loading-text {
+  margin-top: 15px;
+  animation: pulse 1s infinite;
+}
+@keyframes pulse {
+  0% { opacity: 1; }
+  50% { opacity: 0.4; }
+  100% { opacity: 1; }
+}
+
+/* Avatar */
+#avatar {
+  position: fixed;
+  top: 15px;
+  left: 15px;
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  border: 3px solid #ff0000;
+  box-shadow: 0 0 15px red;
+  z-index: 9999;
+  cursor: pointer;
+  transition: transform 0.3s;
+}
+#avatar:hover {
+  transform: scale(1.1);
+}
+</style>
+
+<style>
+.fade-in {
+  animation: fadeIn 1.5s ease-in-out forwards;
+  opacity: 0;
+}
+@keyframes fadeIn {
+  to { opacity: 1; }
+}
+#welcome-message {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 28px;
+  font-weight: bold;
+  color: white;
+  z-index: 99999;
+  background: rgba(0, 0, 0, 0.6);
+  padding: 20px 30px;
+  border-radius: 12px;
+  box-shadow: 0 0 15px rgba(255,255,255,0.3);
+  display: none;
+  animation: fadeIn 1.2s ease forwards;
+}
+</style>
+
+
+
+<style>
+#loading-screen {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background-color: #000;
+  z-index: 99999;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 18px;
+  font-family: 'Segoe UI', sans-serif;
+}
+.loader {
+  border: 6px solid #f3f3f3;
+  border-top: 6px solid #ff0000;
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  animation: spin 1.5s linear infinite;
+}
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+.loading-text {
+  margin-top: 15px;
+  animation: pulse 1s infinite;
+}
+@keyframes pulse {
+  0% { opacity: 1; }
+  50% { opacity: 0.4; }
+  100% { opacity: 1; }
+}
+
+/* Avatar */
+#avatar {
+  position: fixed;
+  top: 15px;
+  left: 15px;
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  border: 3px solid #ff0000;
+  box-shadow: 0 0 15px red;
+  z-index: 9999;
+  cursor: pointer;
+  transition: transform 0.3s;
+}
+#avatar:hover {
+  transform: scale(1.1);
+}
+</style>
+
+<style>
+#cursor-light {
+  position: fixed;
+  width: 100px;
+  height: 100px;
+  margin-left: -50px;
+  margin-top: -50px;
+  pointer-events: none;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(255,255,255,0.3) 0%, transparent 60%);
+  z-index: 9999;
+  mix-blend-mode: overlay;
+}
+#audio-toggle {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: rgba(255, 0, 0, 0.85);
+  color: white;
+  border: none;
+  padding: 10px 18px;
+  border-radius: 50px;
+  cursor: pointer;
+  z-index: 9999;
+  box-shadow: 0 0 15px red;
+  transition: transform 0.2s ease;
+}
+#audio-toggle:hover {
+  transform: scale(1.1);
+}
+</style>
+
+
+<style>
+#loading-screen {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background-color: #000;
+  z-index: 99999;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 18px;
+  font-family: 'Segoe UI', sans-serif;
+}
+.loader {
+  border: 6px solid #f3f3f3;
+  border-top: 6px solid #ff0000;
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  animation: spin 1.5s linear infinite;
+}
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+.loading-text {
+  margin-top: 15px;
+  animation: pulse 1s infinite;
+}
+@keyframes pulse {
+  0% { opacity: 1; }
+  50% { opacity: 0.4; }
+  100% { opacity: 1; }
+}
+
+/* Avatar */
+#avatar {
+  position: fixed;
+  top: 15px;
+  left: 15px;
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  border: 3px solid #ff0000;
+  box-shadow: 0 0 15px red;
+  z-index: 9999;
+  cursor: pointer;
+  transition: transform 0.3s;
+}
+#avatar:hover {
+  transform: scale(1.1);
+}
+</style>
+
+<style>
+#login-screen input.correct {
+  border: 2px solid lime;
+  animation: pulseGreen 0.5s ease;
+}
+#login-screen input.incorrect {
+  border: 2px solid red;
+  animation: shake 0.3s ease;
+}
+@keyframes shake {
+  0% { transform: translateX(0); }
+  25% { transform: translateX(-5px); }
+  50% { transform: translateX(5px); }
+  75% { transform: translateX(-5px); }
+  100% { transform: translateX(0); }
+}
+@keyframes pulseGreen {
+  0% { box-shadow: 0 0 0px lime; }
+  100% { box-shadow: 0 0 10px lime; }
+}
+</style>
+
+
+
+
+<style>
+#loading-screen {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background-color: #000;
+  z-index: 99999;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 18px;
+  font-family: 'Segoe UI', sans-serif;
+}
+.loader {
+  border: 6px solid #f3f3f3;
+  border-top: 6px solid #ff0000;
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  animation: spin 1.5s linear infinite;
+}
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+.loading-text {
+  margin-top: 15px;
+  animation: pulse 1s infinite;
+}
+@keyframes pulse {
+  0% { opacity: 1; }
+  50% { opacity: 0.4; }
+  100% { opacity: 1; }
+}
+
+/* Avatar */
+#avatar {
+  position: fixed;
+  top: 15px;
+  left: 15px;
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  border: 3px solid #ff0000;
+  box-shadow: 0 0 15px red;
+  z-index: 9999;
+  cursor: pointer;
+  transition: transform 0.3s;
+}
+#avatar:hover {
+  transform: scale(1.1);
+}
+</style>
+
+<style>
+#cursor-light {
+  position: fixed;
+  width: 100px;
+  height: 100px;
+  margin-left: -50px;
+  margin-top: -50px;
+  pointer-events: none;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(255,255,255,0.3) 0%, transparent 60%);
+  z-index: 9999;
+  mix-blend-mode: overlay;
+}
+#audio-toggle {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: rgba(255, 0, 0, 0.85);
+  color: white;
+  border: none;
+  padding: 10px 18px;
+  border-radius: 50px;
+  cursor: pointer;
+  z-index: 9999;
+  box-shadow: 0 0 15px red;
+  transition: transform 0.2s ease;
+}
+#audio-toggle:hover {
+  transform: scale(1.1);
+}
+</style>
+
+
+<style>
+#loading-screen {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background-color: #000;
+  z-index: 99999;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 18px;
+  font-family: 'Segoe UI', sans-serif;
+}
+.loader {
+  border: 6px solid #f3f3f3;
+  border-top: 6px solid #ff0000;
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  animation: spin 1.5s linear infinite;
+}
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+.loading-text {
+  margin-top: 15px;
+  animation: pulse 1s infinite;
+}
+@keyframes pulse {
+  0% { opacity: 1; }
+  50% { opacity: 0.4; }
+  100% { opacity: 1; }
+}
+
+/* Avatar */
+#avatar {
+  position: fixed;
+  top: 15px;
+  left: 15px;
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  border: 3px solid #ff0000;
+  box-shadow: 0 0 15px red;
+  z-index: 9999;
+  cursor: pointer;
+  transition: transform 0.3s;
+}
+#avatar:hover {
+  transform: scale(1.1);
+}
+</style>
+
+<style>
+.fade-in {
+  animation: fadeIn 1.5s ease-in-out forwards;
+  opacity: 0;
+}
+@keyframes fadeIn {
+  to { opacity: 1; }
+}
+#welcome-message {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 28px;
+  font-weight: bold;
+  color: white;
+  z-index: 99999;
+  background: rgba(0, 0, 0, 0.6);
+  padding: 20px 30px;
+  border-radius: 12px;
+  box-shadow: 0 0 15px rgba(255,255,255,0.3);
+  display: none;
+  animation: fadeIn 1.2s ease forwards;
+}
+</style>
+
+
+
+<style>
+#loading-screen {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background-color: #000;
+  z-index: 99999;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 18px;
+  font-family: 'Segoe UI', sans-serif;
+}
+.loader {
+  border: 6px solid #f3f3f3;
+  border-top: 6px solid #ff0000;
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  animation: spin 1.5s linear infinite;
+}
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+.loading-text {
+  margin-top: 15px;
+  animation: pulse 1s infinite;
+}
+@keyframes pulse {
+  0% { opacity: 1; }
+  50% { opacity: 0.4; }
+  100% { opacity: 1; }
+}
+
+/* Avatar */
+#avatar {
+  position: fixed;
+  top: 15px;
+  left: 15px;
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  border: 3px solid #ff0000;
+  box-shadow: 0 0 15px red;
+  z-index: 9999;
+  cursor: pointer;
+  transition: transform 0.3s;
+}
+#avatar:hover {
+  transform: scale(1.1);
+}
+</style>
+
+<style>
+#cursor-light {
+  position: fixed;
+  width: 100px;
+  height: 100px;
+  margin-left: -50px;
+  margin-top: -50px;
+  pointer-events: none;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(255,255,255,0.3) 0%, transparent 60%);
+  z-index: 9999;
+  mix-blend-mode: overlay;
+}
+#audio-toggle {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: rgba(255, 0, 0, 0.85);
+  color: white;
+  border: none;
+  padding: 10px 18px;
+  border-radius: 50px;
+  cursor: pointer;
+  z-index: 9999;
+  box-shadow: 0 0 15px red;
+  transition: transform 0.2s ease;
+}
+#audio-toggle:hover {
+  transform: scale(1.1);
+}
+</style>
+
+
+<style>
+#loading-screen {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background-color: #000;
+  z-index: 99999;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 18px;
+  font-family: 'Segoe UI', sans-serif;
+}
+.loader {
+  border: 6px solid #f3f3f3;
+  border-top: 6px solid #ff0000;
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  animation: spin 1.5s linear infinite;
+}
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+.loading-text {
+  margin-top: 15px;
+  animation: pulse 1s infinite;
+}
+@keyframes pulse {
+  0% { opacity: 1; }
+  50% { opacity: 0.4; }
+  100% { opacity: 1; }
+}
+
+/* Avatar */
+#avatar {
+  position: fixed;
+  top: 15px;
+  left: 15px;
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  border: 3px solid #ff0000;
+  box-shadow: 0 0 15px red;
+  z-index: 9999;
+  cursor: pointer;
+  transition: transform 0.3s;
+}
+#avatar:hover {
+  transform: scale(1.1);
+}
+</style>
+
+<style>
+#login-screen.locked {
+  pointer-events: none;
+  opacity: 0.4;
+}
+#login-screen .locked-msg {
+  margin-top: 20px;
+  color: red;
+  font-weight: bold;
+}
+</style>
+
+<script>
+let failCount = 0;
+
+function checkLoginKey() {
+  const key = document.getElementById("access-key").value;
+  if (key === "quangbao07") {
+    localStorage.setItem("access_granted", "true");
+    document.getElementById("login-screen").style.display = "none";
+  } else {
+    failCount++;
+    alert("❌ Mã truy cập sai! (" + failCount + "/3)");
+    if (failCount >= 3) {
+      document.getElementById("login-screen").classList.add("locked");
+      document.getElementById("locked-msg").style.display = "block";
+    }
+  }
+}
+
+document.addEventListener("DOMContentLoaded", function() {
+  if (localStorage.getItem("access_granted") === "true") {
+    const loginScreen = document.getElementById("login-screen");
+    if (loginScreen) loginScreen.style.display = "none";
+  }
+});
+</script>
+
+
+<script>
+const correctSound = new Audio("sounds/correct.mp3");
+const incorrectSound = new Audio("sounds/incorrect.mp3");
+
+function checkLoginKey() {
+  const input = document.getElementById("access-key");
+  const key = input.value;
+
+  input.classList.remove("correct", "incorrect");
+
+  if (key === "quangbao07") {
+    input.classList.add("correct");
+    correctSound.play();
+    localStorage.setItem("access_granted", "true");
+    setTimeout(() => {
+      document.getElementById("login-screen").style.display = "none";
+    }, 600);
+  } else {
+    failCount++;
+    input.classList.add("incorrect");
+    incorrectSound.play();
+    alert("❌ Mã truy cập sai! (" + failCount + "/3)");
+    if (failCount >= 3) {
+      document.getElementById("login-screen").classList.add("locked");
+      document.getElementById("locked-msg").style.display = "block";
+    }
+  }
+}
+</script>
+
+
+<script>
+function showWelcomeMessage() {
+  const msg = document.createElement("div");
+  msg.id = "welcome-message";
+  msg.innerHTML = "👋 Chào mừng bạn đến với thế giới của Quang Bảo!";
+  document.body.appendChild(msg);
+  msg.style.display = "block";
+  setTimeout(() => {
+    msg.style.transition = "opacity 1s ease";
+    msg.style.opacity = 0;
+    setTimeout(() => msg.remove(), 1200);
+  }, 3000);
+}
+
+function checkLoginKey() {
+  const input = document.getElementById("access-key");
+  const key = input.value;
+  input.classList.remove("correct", "incorrect");
+
+  if (key === "quangbao07") {
+    input.classList.add("correct");
+    correctSound.play();
+    localStorage.setItem("access_granted", "true");
+    setTimeout(() => {
+      document.getElementById("login-screen").style.display = "none";
+      document.body.classList.add("fade-in");
+      showWelcomeMessage();
+    }, 600);
+  } else {
+    failCount++;
+    input.classList.add("incorrect");
+    incorrectSound.play();
+    alert("❌ Mã truy cập sai! (" + failCount + "/3)");
+    if (failCount >= 3) {
+      document.getElementById("login-screen").classList.add("locked");
+      document.getElementById("locked-msg").style.display = "block";
+    }
+  }
+}
+
+document.addEventListener("DOMContentLoaded", function() {
+  if (localStorage.getItem("access_granted") === "true") {
+    const loginScreen = document.getElementById("login-screen");
+    if (loginScreen) loginScreen.style.display = "none";
+    document.body.classList.add("fade-in");
+    showWelcomeMessage();
+  }
+});
+</script>
+
+
+
+
+<style>
+#loading-screen {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background-color: #000;
+  z-index: 99999;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 18px;
+  font-family: 'Segoe UI', sans-serif;
+}
+.loader {
+  border: 6px solid #f3f3f3;
+  border-top: 6px solid #ff0000;
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  animation: spin 1.5s linear infinite;
+}
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+.loading-text {
+  margin-top: 15px;
+  animation: pulse 1s infinite;
+}
+@keyframes pulse {
+  0% { opacity: 1; }
+  50% { opacity: 0.4; }
+  100% { opacity: 1; }
+}
+
+/* Avatar */
+#avatar {
+  position: fixed;
+  top: 15px;
+  left: 15px;
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  border: 3px solid #ff0000;
+  box-shadow: 0 0 15px red;
+  z-index: 9999;
+  cursor: pointer;
+  transition: transform 0.3s;
+}
+#avatar:hover {
+  transform: scale(1.1);
+}
+</style>
+
+<style>
+#cursor-light {
+  position: fixed;
+  width: 100px;
+  height: 100px;
+  margin-left: -50px;
+  margin-top: -50px;
+  pointer-events: none;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(255,255,255,0.3) 0%, transparent 60%);
+  z-index: 9999;
+  mix-blend-mode: overlay;
+}
+#audio-toggle {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: rgba(255, 0, 0, 0.85);
+  color: white;
+  border: none;
+  padding: 10px 18px;
+  border-radius: 50px;
+  cursor: pointer;
+  z-index: 9999;
+  box-shadow: 0 0 15px red;
+  transition: transform 0.2s ease;
+}
+#audio-toggle:hover {
+  transform: scale(1.1);
+}
+</style>
+
+
+<style>
+#loading-screen {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background-color: #000;
+  z-index: 99999;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 18px;
+  font-family: 'Segoe UI', sans-serif;
+}
+.loader {
+  border: 6px solid #f3f3f3;
+  border-top: 6px solid #ff0000;
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  animation: spin 1.5s linear infinite;
+}
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+.loading-text {
+  margin-top: 15px;
+  animation: pulse 1s infinite;
+}
+@keyframes pulse {
+  0% { opacity: 1; }
+  50% { opacity: 0.4; }
+  100% { opacity: 1; }
+}
+
+/* Avatar */
+#avatar {
+  position: fixed;
+  top: 15px;
+  left: 15px;
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  border: 3px solid #ff0000;
+  box-shadow: 0 0 15px red;
+  z-index: 9999;
+  cursor: pointer;
+  transition: transform 0.3s;
+}
+#avatar:hover {
+  transform: scale(1.1);
+}
+</style>
+
+<style>
+:root {
+  --bg-color-day: #ffffff;
+  --text-color-day: #000000;
+  --bg-color-night: #0b0f1a;
+  --text-color-night: #ffffff;
+}
+
+body.day-mode {
+  background-color: var(--bg-color-day);
+  color: var(--text-color-day);
+  transition: background 1s, color 1s;
+}
+
+body.night-mode {
+  background-color: var(--bg-color-night);
+  color: var(--text-color-night);
+  transition: background 1s, color 1s;
+}
+
+#time-greeting {
+  position: fixed;
+  top: 15px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: rgba(0,0,0,0.6);
+  color: white;
+  padding: 10px 20px;
+  border-radius: 8px;
+  font-size: 18px;
+  z-index: 999;
+  display: none;
+}
+</style>
+
+<div id="time-greeting"></div>
+
+<script>
+function applyTimeTheme() {
+  const hour = new Date().getHours();
+  const body = document.body;
+  const greeting = document.getElementById("time-greeting");
+
+  if (hour >= 6 && hour < 18) {
+    body.classList.add("day-mode");
+    body.classList.remove("night-mode");
+    greeting.innerText = "🌞 Chúc bạn buổi sáng tốt lành!";
+  } else {
+    body.classList.add("night-mode");
+    body.classList.remove("day-mode");
+    greeting.innerText = "🌙 Ngủ ngon nhé!";
+  }
+
+  greeting.style.display = "block";
+  setTimeout(() => {
+    greeting.style.opacity = 0;
+    setTimeout(() => greeting.remove(), 1500);
+  }, 3000);
+}
+
+document.addEventListener("DOMContentLoaded", applyTimeTheme);
+</script>
+
+
+<div id="cursor-light"></div>
+<button id="audio-toggle">🔊 Tắt nhạc</button>
+<audio id="bg-audio" autoplay loop>
+  <source src="sounds/bg.mp3" type="audio/mp3">
+</audio>
+
+<script>
+document.addEventListener("mousemove", function(e) {
+  const light = document.getElementById("cursor-light");
+  if (light) {
+    light.style.left = e.pageX + "px";
+    light.style.top = e.pageY + "px";
+  }
+});
+
+const bgAudio = document.getElementById("bg-audio");
+const toggleBtn = document.getElementById("audio-toggle");
+let isPlaying = true;
+
+toggleBtn.addEventListener("click", function() {
+  if (isPlaying) {
+    bgAudio.pause();
+    toggleBtn.textContent = "🔇 Bật nhạc";
+  } else {
+    bgAudio.play();
+    toggleBtn.textContent = "🔊 Tắt nhạc";
+  }
+  isPlaying = !isPlaying;
+});
+</script>
+
+
+<div>
+  <img src="images/avatar.jpg" id="avatar" title="Quang Bảo" />
+</div>
+<script>
+window.addEventListener('load', function() {
+  setTimeout(function() {
+    document.getElementById("loading-screen").style.display = "none";
+  }, 3000);
+});
+</script>
+
+
+<script>
+document.getElementById("avatar").addEventListener("click", function() {
+  alert("Quang Bảo – Nhà sáng tạo nội dung 🌟");
+});
+</script>
+
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+  const elements = document.querySelectorAll('.fade-in');
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.1 });
+  elements.forEach(el => observer.observe(el));
+});
+</script>
+
+<!-- Nút hiện form -->
+<button onclick="document.getElementById('contact-form').style.display='block'" 
+style="position: fixed; bottom: 20px; left: 20px; z-index: 9999; padding: 10px 15px; background: #ff0000; color: white; border: none; border-radius: 6px; box-shadow: 0 0 10px red;">Liên hệ</button>
+
+<!-- Form ẩn -->
+<div id="contact-form" style="display:none; position: fixed; bottom: 80px; left: 20px; background: rgba(0,0,0,0.8); padding: 20px; border-radius: 10px; color: white; z-index:9999;">
+  <label>Gửi tin nhắn cho Quang Bảo:</label><br>
+  <textarea placeholder='Nhập nội dung...' style="width:200px;height:80px;"></textarea><br>
+  <button onclick="alert('Cảm ơn bạn đã gửi tin nhắn!')" style="margin-top:10px; padding: 5px 10px;">Gửi</button>
+</div>
+</body>
+</html>
+
+</html>
